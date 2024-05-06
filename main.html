@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PPG Institute of Technology Chatbot</title>
+    <style>
+        /* Define CSS styling for the background image */
+        body {
+            background-color: beige;
+            background-size: cover;
+            background-position: center;
+            text-align: center; /* Center the text on the page */
+            margin: 0;
+        }
+
+        /* Styling for the header */
+        .header-container {
+            text-align: center;
+            margin-bottom: 10px; /* Reduce the margin to minimize the gap */
+            background-color: rgb(2, 5, 41);
+            border-radius: 10px;
+            padding-bottom: 30px;
+            width: 98%; /* Reduce the width of the container */
+            margin: auto; /* Center the container */
+        }
+        h2, h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(1, 1, 54);
+            opacity: 0; /* Start with the elements hidden */
+            animation-duration: 2s; /* Set the animation duration */
+            animation-fill-mode: forwards; /* Keep the animation end state */
+        }
+
+        /* Fade-in animation for <h2> */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start hidden */
+            }
+            to {
+                opacity: 1; /* End visible */
+            }
+        }
+
+        /* Slide-in animation for <h3> */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%); /* Start off-screen */
+                opacity: 0; /* Start hidden */
+            }
+            to {
+                transform: translateX(0); /* End in place */
+                opacity: 1; /* End visible */
+            }
+        }
+
+        /* Apply animations to the tags */
+        h2 {
+            animation-name: fadeIn; /* Apply fade-in animation to <h2> */
+            animation-delay: 0.5s; /* Delay the start of the animation */
+        }
+
+        h3 {
+            animation-name: fadeIn; /* Apply slide-in animation to <h3> */
+            animation-delay: 1s; /* Delay the start of the animation */
+        }
+
+        /* Styling for the header text */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        /* Styling for the logo */
+        .logo img {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            margin-right: 10px; /* Add spacing between h1 and logo */
+        }
+
+        /* Styling for the logo-2 */
+        .logo-2 img {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            margin-left: 10px; /* Add spacing between h1 and logo-2 */
+        }
+
+        /* Styling for the paragraph */
+        .header-container p {
+            margin-top: 5px; /* Reduce the margin above the paragraph to minimize the gap */
+            font-size: 0.9rem; /* Font size */
+            line-height: 1.2; /* Line height for better readability */
+            color: wheat;
+        }
+
+        /* Styling for the image container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* Spacing between images */
+            margin-top: 10px; /* Margin on top */
+        }
+
+        /* Styling for the images */
+        .image-1 img,
+        .image-2 img,
+        .image-3 img {
+            width: 300px; /* Adjust the width as needed */
+            height: 110px; /* Adjust the height as needed */
+        }
+
+        /* Styling for the <h2> and <h3> tags */
+        h2, h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(1, 1, 54);
+        }
+        .btn-1, .btn-2{
+            color: rgb(1, 0, 23);
+            background-color: wheat;
+            width: 270px;
+            height: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            border-radius: 10px;
+
+
+        }
+        /* Styling for the hr element */
+        .hr hr {
+            width: 90%; /* Set the width to 50% of the container */
+            height: 3px; /* Set the height to 5 pixels for increased thickness */
+            background-color: rgb(4, 43, 100); /* Set the color of the line */
+            border: none; /* Remove the default border styling */
+            margin: 0 auto; /* Center the line horizontally */
+        }
+        vl {
+            border-left: 2px solid rgb(7, 0, 25);
+            height: 370px;
+        }
+
+        /* Styling for the flex container */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height of the viewport */
+        }
+
+        /* Hero bar styling */
+        .hero-bar {
+            width: 70%; /* 50% of the width for equal layout */
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            margin-right: 20px; /* Adjust as needed */
+        }
+        .footer-option{
+            padding: 40px;
+
+        }
+        footer{
+            width: 98%;
+            height: 150px;
+            background-color: #000221;
+            margin: auto;
+        }
+        p{
+            display: flex; 
+            color: antiquewhite; 
+            padding: 10px;
+            text-align: left;
+            font-size:medium; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* Style each image in the hero bar */
+        .hero-bar img {
+            position: absolute;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            top: 0;
+            left: 100%; /* Start images from the right */
+            object-fit: cover;
+            opacity: 0; /* Start with images hidden */
+            animation: slideImages 15s infinite;
+        }
+
+        /* Animation for sliding images */
+        @keyframes slideImages {
+            0% {
+                opacity: 0;
+                left: 100%;
+            }
+            20% {
+                opacity: 1;
+                left: 0;
+            }
+            40% {
+                opacity: 0;
+                left: -100%;
+            }
+            100% {
+                opacity: 0;
+                left: -100%;
+            }
+        }
+
+        /* Apply delays to stagger images' animations */
+        .hero-bar img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .hero-bar img:nth-child(2) {
+            animation-delay: 5s; /* Delay of 2.5s after the previous image */
+        }
+
+        .hero-bar img:nth-child(3) {
+            animation-delay: 10s; /* Delay of 2.5s after the previous image */
+        }
+
+        .hero-bar img:nth-child(4) {
+            animation-delay: 15s; /* Delay of 2.5s after the previous image */
+        }
+
+        .hero-bar img:nth-child(5) {
+            animation-delay: 20s; /* Delay of 2.5s after the previous image */
+        }
+
+        /* Styles for the new 1x2 layout section */
+        .image-section {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            gap: 100px; /* Spacing between the containers */
+            margin-top: 20px; /* Margin on top */
+            width: 800px;
+            height: 350px;  
+        }
+
+        /* Styling for each image container */
+        .image-container-1, .image-container-2 {
+            width: 300px; /* Take up nearly half the width each */
+            height: 340px; /* Adjust the height as needed */
+            border-radius: 10px; /* Optional: round the corners */
+            overflow: hidden;
+            background-color: #000221;
+            padding-top: 20px;
+        }
+
+        /* Styling for the images inside the containers */
+        .image-container-1 img,
+        .image-container-2 img {
+            width: 90%; /* Full width */
+            height: 80%; /* Full height */
+            object-fit: cover; /* Ensure the images fill the containers */
+            border-radius: 10px;
+          
+        }
+
+        /* Floating icon styling */
+        .floating-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 70px; 
+            height: 60px; 
+            border-radius: 100%;
+            background-color: #090119;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        /* Popup container styling */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(199, 201, 252, 0.5);
+            z-index: 999; /* Overlay on top of the page */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling for the popup content */
+        .popup-content {
+            background-color: wheat;
+            width: 50%; /* Reduced width */
+            height: 80%; /* Same height as before */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* JavaScript for handling the popup */
+        function togglePopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            if (popupContainer.style.display === "none" || popupContainer.style.display === "") {
+                popupContainer.style.display = "flex"; 
+            } else {
+                popupContainer.style.display = "none"; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with h1 and logos side by side -->
+    <div class="header-container">
+        <div class="header">
+            <div class="logo">
+                <img src="4.jpeg" alt="Logo Image">
+            </div>
+            <h1 style="color: wheat; font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PPG INSTITUTE OF TECHNOLOGY</h1>
+            <div class="logo-2">
+                <img src="10.jpg" alt="Logo Image">
+            </div>
+        </div>
+        <p style="color: wheat;">(Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
+        Recognized by UGC under section 2(f), An ISO 9001:2015 Certified Institution)</p>
+        
+        <!-- Image container -->
+        <div class="image-container">
+            <div class="image-1">
+                <img src="6.jpeg" alt="">
+            </div>
+            <div class="image-2">
+                <img src="5.jpeg" alt="">
+            </div>
+            <div class="image-3">
+                <img src="7.jpeg" alt="">
+            </div>
+        </div>
+        
+    </div>
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(1, 1, 54);">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.2rem; color: rgb(1, 1, 54); font-weight: bold;">EVENTS AND ENQUIRY</h3>
+    <div class="hr">
+        <hr>
+    </div>        
+    <!-- Flex container for 70% and 30% layout -->
+    <div class="container">
+        <!-- Hero bar with sliding images (70% width) -->
+        <div class="hero-bar">
+            <img src="13.jpeg" alt="Hero Image 1">
+            <img src="14.jpeg" alt="Hero Image 1">
+            <img src="16.png" alt="Hero Image 3">
+            <img src="17.png" alt="Hero Image 3">
+            <img src="18.png" alt="Hero Image 3">
+        </div>
+    </div>
+
+    <!-- Add the new 1x2 layout section below the hero bar -->
+    <div class="image-section">
+        <!-- First container -->
+        <div class="image-container-1">
+            <img src="20.jpg" alt="Image 1">
+            <button class="btn-1">
+                <a href="ppg.html">EVENTS</a>
+            </button>
+        </div>
+        <vl></vl>
+        <!-- Second container -->
+        <div class="image-container-2">
+            <img src="21.jpg" alt="Image 2">
+            <button class="btn-1">
+                <a href="achievements.html">ACHIEVEMENTS</a>
+            </button>
+        </div>
+    </div>
+    <div class="footer-option">
+        <footer>
+            <div>
+                <p class="footer-design">The Department of Computer Science and Engineering at PPG Institute of Technology, one of the best engineering colleges in Coimbatore, was established in 2008.
+                     It offers a 4-year B.E program in Computer Science and Engineering, and boasts of a team of dedicated and specialized faculty members with rich experience in
+                      academics, industry, and research. The department has spacious and well-equipped laboratories with modern computer equipment to facilitate a comprehensive learning experience for the students.<br>
+                   </p>
+                   <h6 style="color: rgb(241, 227, 199); font-size: small; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                        Thank You for reaching us.. <br>
+                        Developed by PPGIT - Department Of CSE
+                   </h6>
+            </div>
+        </footer>
+    </div>
+    <!-- Floating icon -->
+    <div class="floating-icon" onclick="togglePopup()">
+        <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
+    </div>
+
+    <!-- Popup container -->
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+            <iframe
+            src="https://www.chatbase.co/chatbot-iframe/jDOJICSR2yyW72tgVWdeP"
+            title="PPGIT - Enquiry Bot"
+            width="100%"
+            height="90%"
+            style="min-height: 475px; border-radius: 10px;" 
+            frameborder="0"
+            ></iframe>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling the popup -->
+    <script>
+        // Function to toggle the popup
+        function togglePopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            if (popupContainer.style.display === "none" || popupContainer.style.display === "") {
+                popupContainer.style.display = "flex"; // Show the popup
+            } else {
+                popupContainer.style.display = "none"; // Hide the popup
+            }
+        }
+    </script>
+</body>
+</html>
