@@ -123,11 +123,27 @@
             font-size: medium;
             font-weight: bold;
             border-radius: 10px;
+        }
 
-
+        .btn-3 {
+            color: rgb(1, 0, 23);
+            background-color: wheat;
+            width: 500px;
+            height: 70px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 40px;
         }
         /* Styling for the hr element */
         .hr hr {
+            width: 90%; /* Set the width to 50% of the container */
+            height: 3px; /* Set the height to 5 pixels for increased thickness */
+            background-color: rgb(4, 43, 100); /* Set the color of the line */
+            border: none; /* Remove the default border styling */
+            margin: 0 auto; /* Center the line horizontally */
+        }
+        .hrr hr {
             width: 90%; /* Set the width to 50% of the container */
             height: 3px; /* Set the height to 5 pixels for increased thickness */
             background-color: rgb(4, 43, 100); /* Set the color of the line */
@@ -249,6 +265,30 @@
             background-color: #000221;
             padding-top: 20px;
         }
+        .qr-img {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-top: 20px; /* Margin on top */
+            width: 800px;
+            height: 350px; 
+        }
+        .qr-code {
+            width: 300px; /* Take up nearly half the width each */
+            height: 340px; /* Adjust the height as needed */
+            border-radius: 10px; /* Optional: round the corners */
+            overflow: hidden;
+            background-color: #000221;
+            padding-top: 20px;
+        }
+        .qr-code img {
+            width: 90%; /* Full width */
+            height: 80%; /* Full height */
+            object-fit: cover; /* Ensure the images fill the containers */
+            border-radius: 10px;
+          
+        }
+
 
         /* Styling for the images inside the containers */
         .image-container-1 img,
@@ -373,6 +413,20 @@
                 <a href="achievements.html">ACHIEVEMENTS</a>
             </button>
         </div>
+    </div>
+    &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp;
+    <div class="hrr">
+        <hr>
+    </div>
+    <br> &nbsp; <br> &nbsp;
+    <button class="btn-3">ADMISSION FORM</button>
+    <div class="qr-img">
+    <div class="qr-code">
+        <img src="qr.png" alt="Image 2">
+        <button class="btn-1">
+            <a href="https://admissionform.formaloo.co/ppgit">CLICK HERE</a>
+        </button>
+    </div>
     </div>
     <div class="footer-option">
         <footer>
