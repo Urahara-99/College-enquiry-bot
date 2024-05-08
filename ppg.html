@@ -1,70 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Events PPG</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPGIT CSE BOT</title>
     <style>
-        /* CSS styling */
-        
-        /* Body styling */
+        /* Basic styling for the chatbot */
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: transparent;
+        }
+
+        .chatbot-container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background-color: #06050c;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for the chatbot header */
+        .chatbot-header {
+            background-color: #06050c;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        /* Styling for icons in the chatbot header */
+        .chatbot-header img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+        }
+
+        .chatbot-header .left-icon {
+            left: 30px;
+        }
+
+        .chatbot-header .right-icon {
+            right: 30px;
+        }
+
+        hr {
+            width: 90%;
+            height: 1px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            margin: 0 auto;
+        }
+
+        .chatbot-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Styling for user and chatbot messages */
+        .chat-message {
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        /* Styling for user messages */
+        .user-message {
+            background-color: rgb(249, 210, 137); /* Orange background */
+            color: black;
+            width: 40%;
+        }
+
+        /* Styling for chatbot responses */
+        .chatbot-response {
+            background-color: #4f4f4f; /* Dark gray background */
+            color: white;
+        }
+
+        /* Options container */
+        .options-container {
+            display: flex;
+            justify-content: left;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        /* Styling for options buttons */
+        .option-button {
+            padding: 10px;
+            border: none;
+            background-color: rgb(254, 209, 126); /* Orange background */
+            color: black;
+            border-radius: 4px;
+            width: calc(50% - 5px);
             text-align: center;
-            
+            cursor: pointer;
         }
 
-        /* Header section */
-        header {
-            background-color: wheat;
-            color: rgb(4, 1, 24);
-            padding: 20px;
-            height: 80px;
-            
+        /* Nested options styling */
+        .nested-option-button {
+            padding: 8px;
+            border: none;
+            background-color: rgb(249, 210, 137);
+            color: black;
+            border-radius: 4px;
+            width: auto;
+            margin-top: 5px;
+            cursor: pointer;
+            margin-right: 5px; /* Adds gap between buttons */
         }
 
-        /* h1 styling */
-      
-
-        /* Image container styling */
-        .image-container {
-            width: 100%;
-            padding: 5px 0; /* Padding above and below each image */
-            background-color: #03122d;
+        /* Refresh button styling */
+        .refresh-button {
+            padding: 10px;
+            border: none;
+            background-color: whitesmoke;
+            color: black;
+            border-radius: 30px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
         }
-
-        /* Image styling */
-        .image-container img {
-            width: 70%; /* Image takes full width of the container */
-            height: auto; /* Height adjusts based on aspect ratio */
-        }
-
     </style>
 </head>
-<body>
-    <!-- Header with h1 -->
-    <header>
-        <h1>EVENT GALLERY - PPGIT CSE</h1>
-    </header>
 
-    <!-- 8 image containers with 100% width images -->
-    <div class="image-container">
-        <img src="22.jpg" alt="Image 1">
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <img src="4.jpeg" alt="Left Icon" class="left-icon">
+            <h2 style="color: rgb(249, 210, 137);">PPGIT CSE-HELP BOT</h2>
+            <img src="chat.gif" alt="Right Icon" class="right-icon">
+        </div>
+        <hr>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Chat history will appear here -->
+            <div class="chat-message chatbot-response"><strong>Welcome to PPGIT!</strong> How can I assist you today?</div>
+        </div>
+
+        <!-- Options container at the bottom with a 1x2 layout -->
+        <div class="options-container" id="chatbot-options">
+            <button class="option-button" onclick="handleOptionClick('admission')">Admissions 2024</button>
+            <button class="option-button" onclick="handleOptionClick('about_cse')">About PPGIT-CSE</button>
+            <button class="option-button" onclick="handleOptionClick('curriculum')">Curriculum</button>
+            <button class="option-button" onclick="handleOptionClick('events_2024')">Events & Culturals</button>
+            <button class="option-button" onclick="handleOptionClick('placements')">Placements</button>
+            <button class="option-button" onclick="handleOptionClick('others')">Others</button>
+        </div>
+
+        <button class="refresh-button" onclick="clearChat()">Refresh</button>
     </div>
-    <div class="image-container">
-        <img src="23.jpg" alt="Image 2">
-    </div>
-    <div class="image-container">
-        <img src="24.jpg" alt="Image 3">
-    </div>
-    <div class="image-container">
-        <img src="25.jpg" alt="Image 4">
-    </div>
-    <div class="image-container">
-        <img src="26.jpg" alt="Image 5">
-    </div>
-    <div class="image-container">
-        <img src="27.jpg" alt="Image 6">
-    </div>
+
+    <script>
+        const responses = {
+            admission: "Applications for admission to UG and PG programmes for the academic year 2024-2025 are now open at our college website. Applicants need to fill in all details as given in the application form, except for marks. Now that the +2 results have been published, marks can be entered and registration can be completed. Would you like further assistance?",
+            about_cse: "The Department of Computer Science and Engineering at PPG Institute of Technology offers a 4-year B.E program in Computer Science and Engineering, and boasts of a team of highly qualified faculty.",
+            curriculum: "You can learn more about our curriculum here. Would you like specific course details?",
+            events_2024: "Upcoming events for 2024:<br/>- 16th Annual Day on 13th April 2024 at 10:00 AM in the PPG Auditorium.<br/>- MASS 2K24, the Intra College Cultural Fest on 13th April 2024 in the PPG Auditorium.<br/>- 16th Annual Sports Day on 23rd March 2024 in the PPGIT Playground.<br/>- InnoVerse 2K24, a technical symposium on April 16th. ",
+            placements: "We have an excellent placement record. Would you like to know more about it?",
+            others: "If you have any specific query, feel free to contact our department faculty. <br/>Prof. Jenefa A - +91 81975 38732"
+        };
+
+        function handleOptionClick(option) {
+            const userChoice = option.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
+            addUserMessageToChat(userChoice);
+
+            const response = responses[option];
+
+            addChatbotResponseToChat(response);
+
+            if (option === 'admission') {
+                addNestedOptions(['Form', 'Admin Contact']);
+            } else if (option === 'about_cse') {
+                addNestedOptions(['Vision-CSE', 'Faculty Profile']);
+            } else if (option === 'curriculum') {
+                addNestedOptions(['Course Details', 'Fees Structure']);
+            } else if (option === 'placements') {
+                addNestedOptions(['Recruiters', 'Placement Officer']);
+            }
+        }
+
+        function addUserMessageToChat(message) {
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("user-message", "chat-message");
+
+            messageDiv.innerHTML = message;
+
+            const chatbotMessages = document.getElementById("chatbot-messages");
+            chatbotMessages.appendChild(messageDiv);
+
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function addChatbotResponseToChat(message) {
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("chatbot-response", "chat-message");
+
+            messageDiv.innerHTML = message;
+
+            const chatbotMessages = document.getElementById("chatbot-messages");
+            chatbotMessages.appendChild(messageDiv);
+
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function addNestedOptions(options) {
+            const chatbotMessages = document.getElementById("chatbot-messages");
+            const nestedOptionsContainer = document.createElement("div");
+
+            options.forEach(option => {
+                const optionButton = document.createElement("button");
+                optionButton.classList.add("nested-option-button");
+                optionButton.innerHTML = option;
+                optionButton.onclick = () => handleNestedOptionClick(option);
+
+                nestedOptionsContainer.appendChild(optionButton);
+            });
+
+            chatbotMessages.appendChild(nestedOptionsContainer);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function handleNestedOptionClick(option) {
+            addUserMessageToChat(option);
+
+            let response;
+
+            if (option === 'Form') {
+                // Provide a link to the form
+                response = 'You can access the admission form here: <a href="https://admissionform.formaloo.co/ppgit" target="_blank">Admission Form</a>';
+            } else if (option === 'Admin Contact') {
+                // Provide contact information for admin
+                response = 'For admission-related queries, contact +91 90477 77977 / +91 90477 77277 or email ppgit@ppg.edu.in.';
+            } else if (option === 'Vision-CSE') {
+                response = 'Our vision is to provide quality education to produce innovative leaders in the field of Computer Science Engineering, contributing to the sustainable development of the global IT industry.';
+            } else if (option === 'Faculty Profile') {
+                response = 'Faculty Profiles:<br/>- Dr. Thamilselvi CP, Head of Department<br/>- Prof. Santhamani V, Assistant Professor<br/>- Prof. Jenifa A, Assistant Professor<br/>- Prof. Balajishanmugam V, Assistant Professor<br/>- Prof. Bagyalakshmi K, Assistant Professor<br/>- Prof. Shankar C, Assistant Professor';
+            } else if (option === 'Course Details') {
+                response = 'The 4-year course includes:<br/>- 1st Year: Common syllabus for all with value-added courses<br/>- 2nd Year: Department-specific syllabus with value-added courses, Naan mudhalvan, and professional courses<br/>- 3rd Year: Value-added courses, Naan mudhalvan, mandatory, and professional courses<br/>- 4th Year: Value-added courses, Naan mudhalvan, mandatory, and professional courses, main project<br/>Sports, lab, and NSS activities are applicable to all.';
+            } else if (option === 'Fees Structure') {
+                response = 'The fees structure includes entrance exam offers, with up to 40K waived from the fee.';
+            } else if (option === 'Recruiters') {
+                response = 'Our major recruiters include: Amazon, Accenture, Cognizant, Infosys, TCS, Deloitte, Wipro, ZOHO, Tech Mahindra, TVS, Maruthi Suzuki, ROOTS, RnD Soft, Staan, LGB, BOSCH, CRI Pumps, and many others.';
+            } else if (option === 'Placement Officer') {
+                response = 'Head of Training & Placement:<br/>- Prof. V. Balaji Shanmugam, M.E., (Ph.D.)<br/>- Contact: +91 9751695451<br/>- Email: placement@ppg.edu.in';
+            } else if (option === 'Others') {
+                response = "Please specify your query or provide more details on how we can assist you.";
+            }
+
+            addChatbotResponseToChat(response);
+        }
+
+        function clearChat() {
+            const chatbotMessages = document.getElementById("chatbot-messages");
+            chatbotMessages.innerHTML = '';
+        }
+    </script>
 </body>
+
 </html>
