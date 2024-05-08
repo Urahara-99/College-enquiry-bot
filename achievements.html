@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Achiements PPG</title>
+    <title>Achievements PPG</title>
     <style>
         /* CSS styling */
         
@@ -9,78 +9,158 @@
         body {
             margin: 0;
             padding: 0;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align: center;
             background-color: #03122d;
-            
         }
 
         /* Header section */
         header {
+            text-align: center;
             background-color: wheat;
-            color: rgb(4, 1, 24);
-            padding: 20px;
-            height: 80px;
-            
+            border-radius: 10px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98%;
+            margin: auto;
         }
 
-        /* h1 styling */
-      
-
-        /* Image container styling */
-        .image-container {
-            width: 100%;
-            padding: 5px 0; /* Padding above and below each image */
-            background-color: #03122d;
+        /* Grid container styling */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px; /* Gap between images */
+            padding: 10px; /* Padding around the grid */
+            background-color: wheat;
+            width: 80%; /* Adjust the width as needed */
+            border-radius: 20px;
+            margin: auto;
         }
 
-        /* Image styling */
+        /* Common styling for images */
         .image-container img {
-            width: 70%; /* Image takes full width of the container */
-            height: auto; /* Height adjusts based on aspect ratio */
+            width: 100%; /* Image takes full width of the container */
+            height: 100%; /* Image fills the container's height */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+            border-radius: 10px; /* Adds border-radius to images */
         }
-    
+
+        /* Common styling for image container */
+        .image-container {
+            width: 100%; /* The image takes full width of the grid cell */
+            height: 300px; /* Common height for each image container */
+            padding: 5px; /* Padding around each image */
+        }
+
+        /* Styling for image-container-1 */
+        .image-container-1 {
+            width: 80%; /* The image takes full width of the container */
+            padding: 10px; /* Padding around each image */
+            margin: 20px auto; /* Centers the container with margin */
+            border-radius: 10px; /* Border radius for image container */
+        }
+        /* Styling for images inside image-container-1 */
+        .image-container-1 img {
+            width: 100%; /* Image takes full width of the container */
+            height: auto; /* Image fills the container's height */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+            border-radius: 10px; /* Adds border-radius to images */
+        }
+
+        /* Button styling */
+        .btn-1 {
+            width: 400px; 
+            height: 60px;
+            color: #03122d; 
+            background-color: wheat;
+            margin-top: 20px; 
+            margin-bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            border-radius: 35px;
+        }
+
+        /* Styling for btn-2 */
+        .btn-2 {
+            width: 92%; 
+            height: 360px; 
+            color: #03122d; 
+            background-color: wheat; 
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            font-size: 1.1rem; 
+            border-radius: 35px;
+            line-height: 1.8; /* Add line-height for increased line spacing */
+        }
     </style>
 </head>
 <body>
     <!-- Header with h1 -->
     <header>
-        <h1>Achivements - PPGIT CSE</h1>
+        <h1>ACHIEVEMENTS - PPGIT CSE</h1>
     </header>
-    <button  style="width: 320px; height: 70px; color:#03122d; background-color: wheat; margin-top: 40px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 1.6rem; font-weight: bold; border-radius: 35px;">GUVI TNcpl - 2024</button>
- 
-    <!-- 8 image containers with 100% width images -->
-    <div class="image-container">
-        <img src="29.jpg" alt="Image 4">
+
+    <!-- Buttons -->
+    <button class="btn-1">GUVI TNCPL HACKATHON - 2024</button>
+    <button class="btn-2">
+        <b>GUVI TNcpl conducted by Anna University under the Naan Mudhalvan initiative, in collaboration with GUVI, is India's largest hackathon event with 85,000 participants from 400 colleges.
+            <br>It consisted of three stages: Learnthon, Ideathon, and Hackathon.
+            <br>The top 75 teams were selected as finalists and participated in the grand finale at Chennai MIT.</b>
+        <br>Participants:
+        <br>HARIHARASUDHAN M
+        <br>ELANGO T
+        <br>PREAM KUMAR M
+        <br>JOE RICHARD I
+    </button>
+
+    <!-- Grid container for 2x2 layout of first 6 images -->
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="44.jpeg" alt="Image 4">
+        </div>
+        <div class="image-container">
+            <img src="13.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="14.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="28.jpg" alt="Image 6">
+        </div>
+        <div class="image-container">
+            <img src="30.jpg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="45.jpeg" alt="Image 4">
+        </div>
     </div>
-    <div class="image-container">
-        
-        <img src="13.jpeg" alt="Image 1">
-    </div>
-    <div class="image-container">
-        <img src="14.jpeg" alt="Image 2">
-    </div>
-    <div class="image-container">
-        <img src="28.jpg" alt="Image 6">
-    </div>
-    <div class="image-container">
-        <img src="30.jpg" alt="Image 3">
-    </div>
-    <div class="image-container">
+
+    <!-- The rest of the images in a regular vertical layout -->
+    <div class="image-container-1">
         <img src="32.jpg" alt="Image 4">
     </div>
-    <div class="image-container">
+    <div class="image-container-1">
         <img src="33.jpg" alt="Image 5">
     </div>
-    <div class="image-container">
+    <div class="image-container-1">
         <img src="34.jpg" alt="Image 6">
     </div>
-    <div class="image-container">
+    <div class="image-container-1">
         <img src="35.png" alt="Image 4">
     </div>
-    <div class="image-container">
-        
+    <div class="image-container-1">
         <img src="36.jpg" alt="Image 1">
     </div>
+    <div class="image-container-1">
+        <img src="46.jpeg" alt="Image 6">
+    </div>
+    <div class="image-container-1">
+        <img src="47.jpeg" alt="Image 4">
+    </div>
+    <!-- Add more images here as needed -->
 </body>
 </html>
