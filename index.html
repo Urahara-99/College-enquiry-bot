@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <!-- Add this line to include the Font Awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add your other CSS and meta tags here -->
+    
     <title>PPG Institute of Technology Chatbot</title>
     <style>
         /* Define CSS styling for the background image */
@@ -134,7 +138,6 @@
             /* Margin on top */
         }
 
-        /* Styling for the images */
         .image-1 img,
         .image-2 img,
         .image-3 img {
@@ -142,7 +145,11 @@
             /* Adjust the width as needed */
             height: 110px;
             /* Adjust the height as needed */
+            object-fit:fill;
+            /* Ensures the image covers the container without distortion */
+            border-radius: 10px; /* Optional: Adds rounded corners */
         }
+
 
         /* Styling for the <h2> and <h3> tags */
         h2,
@@ -166,10 +173,10 @@
         .btn-3 {
             color: rgb(1, 0, 23);
             background-color: wheat;
-            width: 500px;
-            height: 70px;
+            width: 450px;
+            height: 60px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             border-radius: 40px;
         }
@@ -178,9 +185,9 @@
         .hr hr {
             width: 90%;
             /* Set the width to 50% of the container */
-            height: 3px;
+            height: 1.4px;
             /* Set the height to 5 pixels for increased thickness */
-            background-color: rgb(4, 43, 100);
+            background-color: rgb(7, 0, 25);
             /* Set the color of the line */
             border: none;
             /* Remove the default border styling */
@@ -191,9 +198,9 @@
         .hrr hr {
             width: 90%;
             /* Set the width to 50% of the container */
-            height: 3px;
+            height: 1.8px;
             /* Set the height to 5 pixels for increased thickness */
-            background-color: rgb(4, 43, 100);
+            background-color: rgb(7, 0, 25);
             /* Set the color of the line */
             border: none;
             /* Remove the default border styling */
@@ -202,8 +209,8 @@
         }
 
         vl {
-            border-left: 2px solid rgb(7, 0, 25);
-            height: 370px;
+            border-left: 1.8px solid rgb(7, 0, 25);
+            height: 350px;
         }
 
         /* Styling for the flex container */
@@ -221,6 +228,7 @@
             height: 500px;
             overflow: hidden; /* Hides images outside the view */
             position: relative;
+            border-radius: 10px;
         }
         .slide {
             width: 100%;
@@ -282,24 +290,100 @@
             height: 100%;
             object-fit: cover;
         }
-
-        .footer-option {
-            padding: 40px;
+        footer {
+            background-color: #000221; /* Dark blue background */
+            color: wheat; /* Wheat color text */
+            width: 96%; /* Footer width */
+            margin: auto; /* Center the footer */
+            padding: 10px; /* Padding inside the footer */
+            margin-bottom: 10px; /* Margin at the bottom of the footer */
+            height: 250px; /* Adjusted height of the footer */
+            border-radius: 10px; /* Rounded corners */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space out the content */
+        }   
+        .footer-container {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(4, 1fr); /* Create 3 columns */
+            gap: 20px; /* Spacing between columns */
+        }
+        /* Quick links section */
+        .quick-links ul {
+            list-style: none; /* Remove list bullets */
+            padding: 0; /* No padding */
         }
 
-        footer {
-            width: 98%;
-            height: 150px;
-            background-color: #000221;
+        .quick-links ul li a {
+            color: wheat; /* Wheat color for links */
+            font-size: 1.3rem; /* Increased font size for quick links */
+            display: flex;
+            text-decoration: none; /* No underline */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .quick-links ul li a:hover {
+            color: rgb(7, 0, 25); /* Dark blue color on hover */
+        }
+        footer-section {
+            padding: 10px;
+        }  
+        h4 {
+            font-size: 1.2rem;
+            color: #f4f4f4;
+            border-bottom: 1px solid #f4f4f4;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        
+        p, ul {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+        }
+        
+        ul li a {
+            color: wheat;
+            text-decoration: none;
+        }
+        
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons a {
+            color: wheat; /* Wheat color for icons */
+            padding-top: 20px;
+            font-size: xx-large; /* Increased font size for social icons */
+            margin: 0 10px; /* Spacing between icons */
+            text-decoration: none; /* No underline */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .social-icons a:hover {
+            color: rgb(225, 155, 49); /* Dark blue color on hover */
+        }
+                
+        .footer-credit {
+            text-align: center;
+            display: flex;
+            padding-top: -40px;
+            font-size: medium; /* Font size */
+            color: wheat;
             margin: auto;
-            border-radius: 10px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: -30px; /* Margin to separate from above content */
         }
 
         p {
             display: flex;
             color: antiquewhite;
-            padding: 10px;
+            padding: 5px;
             text-align: left;
             font-size: medium;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -573,23 +657,63 @@
             </button>
         </div>
     </div>
-
-    <div class="footer-option">
-        <footer>
-            <div>
-                <p class="footer-design">The Department of Computer Science and Engineering at PPG Institute of Technology, one of the best engineering colleges in Coimbatore, was established in 2008.
-                    It offers a 4-year B.E program in Computer Science and Engineering, and boasts of a team of dedicated and specialized faculty members with rich experience in
-                    academics, industry, and research. The department has spacious and well-equipped laboratories with modern computer equipment to facilitate a comprehensive learning experience for the students.
-                    <br>
+    &nbsp;
+    <br> &nbsp;
+    <br> &nbsp;
+    <footer>
+        <div class="footer-container">
+            <!-- About Us section -->
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>
+                    The Department of Computer Science and Engineering at PPG Institute of Technology, Our dedicated faculty members have rich experience in academics, industry, and research.
                 </p>
-                <h6 style="color: rgb(241, 227, 199); font-size: small; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                    Thank You for reaching us..
-                    <br>
-                    Developed by PPGIT - Students Of CSE Department
-                </h6>
             </div>
-        </footer>
-    </div>
+    
+            <!-- Quick Links section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="admissionform.formaloo.co/ppgit">Admissions</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </div>
+    
+            <!-- Contact section -->
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>
+
+                    Phone: 90477 77277 | 90477 77977 <br>
+                    Email:  ppgit@ppg.edu.in
+                </p>
+            </div>
+    
+            <!-- Social Media section -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons" style="padding-top: 20px;">
+                    <a href="https://www.facebook.com/ppginstituteoftechnology" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/ppgtech/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ppg_i_tech?igsh=d2VrOGZoZXFmbjl1" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Add more social links as needed -->
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-credit">
+            <h4>Developed by PPGIT - Students of CSE Department.</h4>
+        </div>
+    </footer>
+    
 
     <!-- Floating icon -->
     <div class="floating-icon" onclick="togglePopup()">
