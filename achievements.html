@@ -60,6 +60,7 @@
             padding: 10px; /* Padding around each image */
             margin: 20px auto; /* Centers the container with margin */
             border-radius: 10px; /* Border radius for image container */
+            
         }
         /* Styling for images inside image-container-1 */
         .image-container-1 img {
@@ -96,6 +97,33 @@
             border-radius: 35px;
             line-height: 1.8; /* Add line-height for increased line spacing */
         }
+        .grid-container-1x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px; /* Gap between images */
+            padding: 10px; /* Padding around the grid */
+            background-color: rgb(162, 206, 252);
+            width: 80%; /* Adjust the width as needed */
+            border-radius: 20px;
+            height: auto;
+            margin: auto;
+        }
+        .image-grid {
+            width: 80%; /* The image takes full width of the container */
+            padding: 10px; /* Padding around each image */
+            border-radius: 10px; /* Border radius for image container */
+            margin: auto;
+            height: 600px;
+            object-fit: fill; 
+        }
+
+        /* Styling for images inside image-container-1 */
+        .image-grid img {
+            width: 100%; /* Image takes full width of the container */
+            object-fit: fill;
+            height: 600px; /* Ensures the image covers the container without distortion */
+            border-radius: 10px; /* Adds border-radius to images */
+        }   
     </style>
 </head>
 <body>
@@ -152,14 +180,19 @@
     <div class="image-container-1">
         <img src="35.png" alt="Image 4">
     </div>
-    <div class="image-container-1">
-        <img src="36.jpg" alt="Image 1">
-    </div>
-    <div class="image-container-1">
-        <img src="46.jpeg" alt="Image 6">
-    </div>
-    <div class="image-container-1">
-        <img src="47.jpeg" alt="Image 4">
+    <div class="grid-container-1x2">
+        <div class="image-grid">
+            <img src="49.jpeg" alt="Image 4">
+        </div>
+        <div class="image-grid">
+            <img src="46.jpeg" alt="Image 5">
+        </div>
+        <div class="image-grid">
+            <img src="48.jpeg" alt="Image 6">
+        </div>
+        <div class="image-grid">
+            <img src="47.jpeg" alt="Image 4">
+        </div>
     </div>
     <!-- Add more images here as needed -->
 </body>
