@@ -415,39 +415,56 @@
             background-color: #000221;
             padding-top: 20px;
         }
-
-        .qr-img {
-            display: flex;
-            margin: auto;
-            justify-content: center;
-            margin-top: 20px;
-            /* Margin on top */
-            width: 800px;
-            height: 350px;
+        .form-container {
+        width: 350px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #080048b2, #05002b); /* Gradient background */
+        box-shadow: 0 4px 6px rgb(5, 0, 29);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
         }
 
-        .qr-code {
-            width: 300px;
-            /* Take up nearly half the width each */
-            height: 340px;
-            /* Adjust the height as needed */
-            border-radius: 10px;
-            /* Optional: round the corners */
-            overflow: hidden;
-            background-color: #000221;
-            padding-top: 20px;
+        /* Styles for form labels */
+        .form-display {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
 
-        .qr-code img {
-            width: 90%;
-            /* Full width */
-            height: 80%;
-            /* Full height */
-            object-fit: cover;
-            /* Ensure the images fill the containers */
-            border-radius: 10px;
+        /* Styles for form inputs */
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] { /* Include input[type="tel"] for phone number input */
+            width: calc(100% - 30px);
+            height: 30px; /* Set the height to 40px */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        /* Styles for submit button */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #f4d695, #e8761f); /* Gradient background */
+            color: #000000;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
 
+        button[type="submit"]:hover {
+            background: linear-gradient(to right, hsl(21, 91%, 64%), #f65d0a); /* Gradient background on hover */
+        }
         /* Styling for the images inside the containers */
         .image-container-1 img,
         .image-container-2 img {
@@ -581,8 +598,6 @@
     <div class="hr">
         <hr>
     </div>
-
-    <!-- Flex container for 70% and 30% layout -->
     <div class="container">
         <!-- Hero bar with sliding images (70% width) -->
         <div class="hero-bar">
@@ -614,8 +629,6 @@
             
         </div>
     </div>
-
-    <!-- Add the new 1x2 layout section below the hero bar -->
     <div class="image-section">
         <!-- First container -->
         <div class="image-container-1">
@@ -648,15 +661,23 @@
     &nbsp;
 
     <button class="btn-3">ADMISSION FORM</button>
-
-    <div class="qr-img">
-        <div class="qr-code">
-            <img src="qr.png" alt="QR Image">
-            <button class="btn-1">
-                <a href="https://admissionform.formaloo.co/ppgit">CLICK HERE</a>
-            </button>
-        </div>
-    </div>
+    <br> &nbsp;
+    <br> &nbsp;
+    <div class="form-container">
+        <form action="https://api.web3forms.com/submit" method="POST">
+    
+            <input type="hidden" name="access_key" value="44cc7048-f88d-444e-b280-c717bcfc224e">
+            <label class="form-display">Name:</label>
+            <input type="text" name="name" required>
+            <br> &nbsp;
+            <label class="form-display">Phone Number:</label>
+            <input type="number" name="number" required> <!-- Changed type to 'tel' for phone numbers -->
+            <br> &nbsp;
+            <input type="hidden" name="redirect" value="https://admissionform.formaloo.co/ppgit">
+            <button type="submit">Submit Details</button>
+    
+        </form>
+    </div>    
     &nbsp;
     <br> &nbsp;
     <br> &nbsp;
