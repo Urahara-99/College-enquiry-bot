@@ -180,6 +180,16 @@
             font-weight: bold;
             border-radius: 40px;
         }
+        .btn-4 {
+            color: rgb(1, 0, 23);
+            background-color: wheat;
+            width: 450px;
+            height: 65px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 40px;
+        }
 
         /* Styling for the hr element */
         .hr hr {
@@ -230,6 +240,30 @@
             position: relative;
             border-radius: 10px;
         }
+        .hero-slide {
+            background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Text color */
+            text-align: center;
+            padding: 100px 0; /* Adjust the padding as needed */
+        }
+
+        .hero-content {
+            max-width: 800px; /* Adjust the maximum width of the content */
+            margin: 0 auto; /* Center the content horizontally */
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
         .slide {
             width: 100%;
             height: 100%;
@@ -531,7 +565,80 @@
             flex-direction: column;
             
         }
-        
+        .hero-slide {
+            position: relative;
+            width: 93%;
+            margin: auto;
+            overflow: hidden;
+            height: 200px; /* Adjust height as needed */
+        }
+
+        .slide-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #05002b;
+            height: 100%;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide-container.active {
+            opacity: 1;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 50%;
+            background-color: wheat;
+            left: 50%;
+            width: 750px;
+            padding: 5px;
+            height: 230px;
+            border-radius: 20px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color:#05002b;
+        }
+
+        .content-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .content-container p {
+            font-size: 1.3rem;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 10px;
+            margin-left: 80px;
+            color: #05002b;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgb(247, 218, 123);
+            border-radius: 5px;
+            color: #000;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 1000;
+        }
+
+        .prev {
+            left: 30px;
+        }
+
+        .next {
+            right: 30px;
+        }
 
         /* Styling for the floating text above the floating icon */
         .floating-text {
@@ -629,6 +736,84 @@
             
         </div>
     </div>
+    <br> &nbsp;
+    <button class="btn-4">WHAT PPGIT-CSE HAVE HERE?</button>
+    <br> &nbsp;
+    <br> &nbsp;
+    <section class="hero-slide">
+        <!-- Slide 1 -->
+        <div class="slide-container active">
+            <div class="content-container">
+                <h1>WELCOME TO PPGIT-CSE!!!</h1>
+                <p>	&#10687;Unlock your career and travel with us</p>
+                <p>	&#10687;Don't hesitate to contact us</p>
+            </div>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="slide-container">
+            <div class="content-container">
+                <h1>VALUE ADDED COURSES</h1>
+                <p>	&#10687;For every year students (I-IV)</p>
+                <p>	&#10687;Covering trendy technologies with skilled staffs</p>
+            </div>
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="slide-container">
+            <div class="content-container">
+                <h1>EVENTS IN PPGIT</h1>
+                <p>	&#10687;Participate in exciting events organized by our institution</p>
+                <p>	&#10687;Culturals, Annual Sports day, Symposium and Mass event</p>
+            </div>
+        </div>
+    
+        <!-- Slide 4 -->
+        <div class="slide-container">
+            <div class="content-container">
+                <h1>PLACEMENTS</h1>
+                <p>	&#10687;8.4 LPA Highest salary and 3.5 LPA average salary</p>
+            </div>
+        </div>
+    
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+        <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    </section>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide .slide-container');
+        const prev = document.querySelector('.hero-slide .prev');
+        const next = document.querySelector('.hero-slide .next');
+        const slideInterval = 3000; // Interval between slides in milliseconds
+    
+        // Function to display the current slide
+        function showSlide() {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            slides[currentSlide].classList.add('active');
+        }
+    
+        // Function to move to the next slide
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide();
+        }
+    
+        // Automatically move to the next slide at a set interval
+        setInterval(nextSlide, slideInterval);
+        
+        // Initial display of the first slide
+        showSlide();
+    </script>
+        
+        <br> &nbsp;
+        <br> &nbsp;
+    
     <div class="image-section">
         <!-- First container -->
         <div class="image-container-1">
