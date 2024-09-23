@@ -1,703 +1,174 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- Add this line to include the Font Awesome library -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Add your other CSS and meta tags here -->
-    <link rel="icon" type="image/x-icon" href="Logo.png">
     <title>PPG Institute of Technology Chatbot</title>
-    <style>
-        /* Define CSS styling for the background image */
-        body {
-            background-color: rgb(255, 255, 220);
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            /* Center the text on the page */
-            margin: 0;
-        }
-
-        /* Styling for the header */
-        .header-container {
-            text-align: center;
-            margin-bottom: 10px;
-            /* Reduce the margin to minimize the gap */
-            background-color: rgb(2, 5, 41);
-            border-radius: 10px;
-            padding-bottom: 30px;
-            width: 98%;
-            /* Reduce the width of the container */
-            margin: auto;
-            /* Center the container */
-        }
-
-        h2,
-        h3 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(1, 1, 54);
-            opacity: 0;
-            /* Start with the elements hidden */
-            animation-duration: 2s;
-            /* Set the animation duration */
-            animation-fill-mode: forwards;
-            /* Keep the animation end state */
-        }
-
-        /* Fade-in animation for <h2> */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                /* Start hidden */
-            }
-
-            to {
-                opacity: 1;
-                /* End visible */
-            }
-        }
-
-        /* Slide-in animation for <h3> */
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
-                /* Start off-screen */
-                opacity: 0;
-                /* Start hidden */
-            }
-
-            to {
-                transform: translateX(0);
-                /* End in place */
-                opacity: 1;
-                /* End visible */
-            }
-        }
-
-        /* Apply animations to the tags */
-        h2 {
-            animation-name: fadeIn;
-            /* Apply fade-in animation to <h2> */
-            animation-delay: 0.5s;
-            /* Delay the start of the animation */
-        }
-
-        h3 {
-            animation-name: fadeIn;
-            /* Apply slide-in animation to <h3> */
-            animation-delay: 1s;
-            /* Delay the start of the animation */
-        }
-
-        /* Styling for the header text */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-        /* Styling for the logo */
-        .logo img {
-            width: 50px;
-            /* Adjust the width as needed */
-            height: 50px;
-            /* Adjust the height as needed */
-            margin-right: 10px;
-            /* Add spacing between h1 and logo */
-        }
-
-        /* Styling for the logo-2 */
-        .logo-2 img {
-            width: 50px;
-            /* Adjust the width as needed */
-            height: 50px;
-            /* Adjust the height as needed */
-            margin-left: 10px;
-            /* Add spacing between h1 and logo-2 */
-        }
-
-        /* Styling for the paragraph */
-        .header-container p {
-            margin-top: 5px;
-            /* Reduce the margin above the paragraph to minimize the gap */
-            font-size: 0.9rem;
-            /* Font size */
-            line-height: 1.2;
-            /* Line height for better readability */
-            color: wheat;
-        }
-
-        /* Styling for the image container */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            /* Spacing between images */
-            margin-top: 10px;
-            /* Margin on top */
-        }
-
-        .image-1 img,
-        .image-2 img,
-        .image-3 img {
-            width: 300px;
-            /* Adjust the width as needed */
-            height: 110px;
-            /* Adjust the height as needed */
-            object-fit:fill;
-            /* Ensures the image covers the container without distortion */
-            border-radius: 10px; /* Optional: Adds rounded corners */
-        }
-
-
-        /* Styling for the <h2> and <h3> tags */
-        h2,
-        h3 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(1, 1, 54);
-        }
-
-        .btn-1,
-        .btn-2 {
-            color: rgb(1, 0, 23);
-            background-color: wheat;
-            width: 270px;
-            height: 50px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: medium;
-            font-weight: bold;
-            border-radius: 10px;
-        }
-
-        .btn-3 {
-            color: rgb(1, 0, 23);
-            background-color: wheat;
-            width: 450px;
-            height: 60px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 1.4rem;
-            font-weight: bold;
-            border-radius: 40px;
-        }
-        .btn-4 {
-            width: 750px;
-            margin: auto;
-            height: 105px;
-            border-radius: 10px;
-            background: linear-gradient(to right, #fae5b8b2, #fd8d258d); /* Gradient background */
-            box-shadow: 0 4px 6px rgb(5, 23, 158);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
-            font-size: 1.7rem;
-            color: #0c0353;
-            padding-top: 10px;
-        
-        }
-        #sty{
-            background-image: url("/sty.gif");
-            background-size: cover;
-            background-position: center;
-            color: transparent;
-            background-clip: text;
-            font-weight: bold;
-            font-size: 3.9rem;
-        }
-        /* Styling for the hr element */
-        .hr hr {
-            width: 90%;
-            /* Set the width to 50% of the container */
-            height: 1.4px;
-            /* Set the height to 5 pixels for increased thickness */
-            background-color: rgb(7, 0, 25);
-            /* Set the color of the line */
-            border: none;
-            /* Remove the default border styling */
-            margin: 0 auto;
-            /* Center the line horizontally */
-        }
-
-        .hrr hr {
-            width: 90%;
-            /* Set the width to 50% of the container */
-            height: 1.8px;
-            /* Set the height to 5 pixels for increased thickness */
-            background-color: rgb(7, 0, 25);
-            /* Set the color of the line */
-            border: none;
-            /* Remove the default border styling */
-            margin: 0 auto;
-            /* Center the line horizontally */
-        }
-
-        vl {
-            border-left: 1.8px solid rgb(7, 0, 25);
-            height: 350px;
-        }
-
-        /* Styling for the flex container */
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            /* Full height of the viewport */
-        }
-
-        /* Hero bar styling */
-        .hero-bar {
-            width: 70%;
-            height: 500px;
-            overflow: hidden; /* Hides images outside the view */
-            position: relative;
-            border-radius: 10px;
-        }
-        .hero-slide {
-            background-image: url('your-.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
-            background-size: cover;
-            background-position: center;
-            color: #fff; /* Text color */
-            text-align: center;
-            padding: 100px 0; /* Adjust the padding as needed */
-        }
-
-        .hero-content {
-            max-width: 800px; /* Adjust the maximum width of the content */
-            margin: 0 auto; /* Center the content horizontally */
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .slide {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            animation: slideAnimation 20s infinite;
-        }
-        .slide:nth-child(1) {
-            left: 0;
-        }
-        .slide:nth-child(2) {
-            left: 100%;
-        }
-        .slide:nth-child(3) {
-            left: 200%;
-        }
-        .slide:nth-child(4) {
-            left: 300%;
-        }
-        .slide:nth-child(5) {
-            left: 400%;
-        }
-        .slide:nth-child(6) {
-            left: 500%;
-        }
-        .slide:nth-child(7) {
-            left: 600%;
-        }
-
-        /* Animation for the slides */
-        @keyframes slideAnimation {
-            0% {
-                transform: translateX(0);
-            }
-            16.6% {
-                transform: translateX(-100%);
-            }
-            33.2% {
-                transform: translateX(-200%);
-            }
-            50% {
-                transform: translateX(-300%);
-            }
-            66.6% {
-                transform: translateX(-400%);
-            }
-            83.3% {
-                transform: translateX(-500%);
-            }
-            100% {
-                transform: translateX(-600%);
-            }
-            
-        }
-
-        /* Image styling */
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        footer {
-            background-color: #000221; /* Dark blue background */
-            color: wheat; /* Wheat color text */
-            width: 96%; /* Footer width */
-            margin: auto; /* Center the footer */
-            padding: 10px; /* Padding inside the footer */
-            margin-bottom: 10px; /* Margin at the bottom of the footer */
-            height: 250px; /* Adjusted height of the footer */
-            border-radius: 10px; /* Rounded corners */
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Space out the content */
-        }   
-        .footer-container {
-            display: grid; /* Use grid layout */
-            grid-template-columns: repeat(4, 1fr); /* Create 3 columns */
-            gap: 20px; /* Spacing between columns */
-        }
-        /* Quick links section */
-        .quick-links ul {
-            list-style: none; /* Remove list bullets */
-            padding: 0; /* No padding */
-        }
-
-        .quick-links ul li a {
-            color: wheat; /* Wheat color for links */
-            font-size: 1.3rem; /* Increased font size for quick links */
-            display: flex;
-            text-decoration: none; /* No underline */
-            transition: color 0.3s; /* Smooth color transition on hover */
-        }
-
-        .quick-links ul li a:hover {
-            color: rgb(7, 0, 25); /* Dark blue color on hover */
-        }
-        footer-section {
-            padding: 10px;
-        }  
-        h4 {
-            font-size: 1.2rem;
-            color: #f4f4f4;
-            border-bottom: 1px solid #f4f4f4;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        
-        p, ul {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        ul {
-            list-style: none;
-            padding: 0;
-            font-size: 1.2rem;
-        }
-        
-        ul li a {
-            color: wheat;
-            text-decoration: none;
-        }
-        
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-icons a {
-            color: wheat; /* Wheat color for icons */
-            padding-top: 20px;
-            font-size: xx-large; /* Increased font size for social icons */
-            margin: 0 10px; /* Spacing between icons */
-            text-decoration: none; /* No underline */
-            transition: color 0.3s; /* Smooth color transition on hover */
-        }
-
-        .social-icons a:hover {
-            color: rgb(225, 155, 49); /* Dark blue color on hover */
-        }
-                
-        .footer-credit {
-            text-align: center;
-            display: flex;
-            padding-top: -40px;
-            font-size: medium; /* Font size */
-            color: wheat;
-            margin: auto;
-            margin-top: -30px; /* Margin to separate from above content */
-        }
-
-        p {
-            display: flex;
-            color: antiquewhite;
-            padding: 5px;
-            text-align: left;
-            font-size: medium;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        /* Styles for the new 1x2 layout section */
-        .image-section {
-            display: flex;
-            margin: auto;
-            justify-content: center;
-            gap: 100px;
-            /* Spacing between the containers */
-            margin-top: 20px;
-            /* Margin on top */
-            width: 800px;
-            height: 350px;
-        }
-
-        /* Styling for each image container */
-        .image-container-1,
-        .image-container-2 {
-            width: 300px;
-            /* Take up nearly half the width each */
-            height: 340px;
-            /* Adjust the height as needed */
-            border-radius: 10px;
-            /* Optional: round the corners */
-            overflow: hidden;
-            background-color: #000221;
-            padding-top: 20px;
-        }
-        .form-container {
-            width: 350px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            background: linear-gradient(to right, #080048b2, #05002b); /* Gradient background */
-            box-shadow: 0 4px 6px rgb(5, 0, 29);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-        /* Styles for form labels */
-        .form-display {
-            display: block;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        /* Styles for form inputs */
-        input[type="text"],
-        input[type="number"],
-        input[type="tel"] { /* Include input[type="tel"] for phone number input */
-            width: calc(100% - 30px);
-            height: 30px; /* Set the height to 40px */
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        /* Styles for submit button */
-        button[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: linear-gradient(to right, #f4d695, #e8761f); /* Gradient background */
-            color: #000000;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        button[type="submit"]:hover {
-            background: linear-gradient(to right, hsl(21, 91%, 64%), #f65d0a); /* Gradient background on hover */
-        }
-        /* Styling for the images inside the containers */
-        .image-container-1 img,
-        .image-container-2 img {
-            width: 90%;
-            /* Full width */
-            height: 80%;
-            /* Full height */
-            object-fit: cover;
-            /* Ensure the images fill the containers */
-            border-radius: 10px;
-        }
-
-        /* Floating icon styling */
-        .floating-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            width: 70px;
-            height: 60px;
-            border-radius: 100%;
-            background-color: #090119;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            /* Ensure it stays on top */
-        }
-
-        /* Popup container styling */
-        .popup-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(199, 201, 252, 0.5);
-            z-index: 999;
-            /* Overlay on top of the page */
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Styling for the popup content */
-        .popup-content {
-            background-color: wheat;
-            width: 40%;
-            /* Reduced width */
-            height: 83%;
-            /* Same height as before */
-            padding: 20px;
-            border-radius: 10px;
-        }
-        iframe{
-            width: 500px;
-            height: 500px;   
-            border-radius: 15px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            
-        }
-        .hero-slide {
-            position: relative;
-            width: 93%;
-            margin: auto;
-            overflow: hidden;
-            height: 200px; /* Adjust height as needed */
-        }
-
-        .slide-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to right, #080048b2, #05002b); /* Gradient background */
-            box-shadow: 0 4px 6px rgb(5, 0, 29);
-            height: 100%;
-            border-radius: 20px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .slide-container.active {
-            opacity: 1;
-        }
-
-        .content-container {
-            position: absolute;
-            top: 50%;
-            background-color: wheat;
-            left: 50%;
-            width: 750px;
-            padding: 5px;
-            height: 200px;
-            border-radius: 20px;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color:#05002b;
-        }
-
-        .content-container h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        .content-container p {
-            font-size: 1.1rem;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            margin-bottom: 10px;
-            margin-left: 80px;
-            color: #05002b;
-        }
-
-        .prev,
-        .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgb(247, 218, 123);
-            border-radius: 5px;
-            color: #000;
-            border: none;
-            padding: 20px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            z-index: 1000;
-        }
-
-        .prev {
-            left: 30px;
-        }
-
-        .next {
-            right: 30px;
-        }
-
-        /* Styling for the floating text above the floating icon */
-        .floating-text {
-            position: fixed;
-            bottom: 85px;
-            right: 8px;
-            font-size: 0.9rem;
-            padding: 10px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: rgb(1, 0, 23);
-            border-radius: 10px;
-            font-weight: bold;
-            color: wheat;
-            animation: glow 1s infinite alternate;
-        }
-
-        /* Glow effect animation for the floating text */
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
-
-            100% {
-                text-shadow: 0 0 20px rgb(190, 223, 249);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    
     <!-- Header section with h1 and logos side by side -->
     <div class="header-container">
         <div class="header">
             <div class="logo">
-                <img src="4.jpeg" alt="Logo Image">
+                <img src="4.jpeg" alt="Logo Image" style="border-radius: 5px;">
             </div>
-            <h1 style="color: wheat; font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PPG INSTITUTE OF TECHNOLOGY</h1>
+            <h1 style="color: rgb(161, 219, 253); font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PPG INSTITUTE OF TECHNOLOGY</h1>
             <div class="logo-2">
-                <img src="10.jpg" alt="Logo Image">
+                <img src="10.jpg" alt="Logo Image" style="border-radius: 5px;">
             </div>
         </div>
-        <p style="color: wheat; justify-content: center;">(Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
+        <p style="color: rgb(154, 187, 241); border-radius: 10px;border-width: 0.8px; border-color: #97d5fc; ;justify-content: center; font-family: 'Times New Roman', Times, serif;">(Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
             Recognized by UGC under section 2(f), An ISO 9001:2015 Certified Institution)
         </p>
 
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.9rem; color: rgb(152, 189, 254); font-weight:2px; letter-spacing: 2px;">PRESENTS</h3>
+    
+&nbsp;
+<br> &nbsp;
+<br> &nbsp;
+<div class="grid-container">
+    <!-- First Item: Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
+                <defs>
+                    <linearGradient gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0" id="b">
+                        <stop stop-color="#973BED"></stop>
+                        <stop stop-color="#007CFF" offset="1"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- T -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+                    d="M 12 4 H 52 V 8 H 36 V 60 H 28 V 8 H 12 Z" class="dash" pathLength="360"></path>
+            </svg>
+
+            <!-- E -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.7" stroke="url(#b)"
+                    d="M 52 4 H 12 V 60 H 52 V 52 H 20 V 36 H 48 V 28 H 20 V 12 H 52 Z" class="dash"
+                    pathLength="360"></path>
+            </svg>
+
+            <!-- C -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+                    d="M 52 12 V 4 H 12 V 60 H 52 V 52 H 20 V 12 Z" class="dash" pathLength="360"></path>
+            </svg>
+
+            <!-- H -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.5" stroke="url(#b)"
+                    d="M 12 4 V 60 H 20 V 36 H 44 V 60 H 52 V 4 H 44 V 28 H 20 V 4 Z" class="dash"
+                    pathLength="360"></path>
+            </svg>
+
+            <!-- N -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="12.5" stroke="url(#b)"
+                    d="M 12 4 V 60 H 20 L 44 20 V 60 H 52 V 4 H 44 L 20 44 V 4 Z" class="dash" pathLength="360">
+                </path>
+            </svg>
+
+            <!-- O -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="75" width="75" class="inline-block">
+                <!-- Outer circle -->
+                <circle cx="32" cy="32" r="24" stroke="url(#b)" stroke-width="10.5" fill="none" class="dash"
+                    pathLength="150"></circle>
+                <!-- Inner circle -->
+                <circle cx="32" cy="32" r="12" fill="none" />
+            </svg>
+        </div>
+        <div class="kreaticon-text">
+            <p style="font-size:larger; font-weight: bold; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #97d5fc;">KreatiCon</p>
+        </div>
+    </div>
+
+    <!-- Vertical Line Separator -->
+    <div class="vertical-line"></div>
+
+    <!-- Second Item: Placeholder Content -->
+    <div class="content-des">
+        <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">2 Days Ideathon!</h2>
+        <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
+            with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
+            Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
+            In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
+            come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
+            places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
+            implementation.</p>
+    </div>
+</div>
+<br> &nbsp;
+<br> &nbsp;
+          
+        <section class="skills">
+            <div class="container-menu">
+              <div class="skills-flex-container">
+                <div class="box">
+                  <div class="image">
+               
+                    <img src="flyer.png" alt="xd">
+                  </div>
+                  <div class="title">Brochure</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+           
+                    <img src="agenda.png" alt="figma">
+                  </div>
+                  <div class="title">Agenda</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                 
+                    <img src="timeline.png" alt="html">
+                  </div>
+                  <div class="title">Timeline</div>
+                </div>
+                
+                <div class="box">
+                  <div class="image">
+                    <img src="1st-prize.png" alt="javascript">
+                  </div>
+                  <div class="title">Prizes</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                    <img src="compliant.png" alt="photoshop">
+                  </div>
+                  <div class="title">Rules</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                    <img src="contact-us.png" alt="illustrator">
+                  </div>
+                  <div class="title">Contact Us</div>
+                </div>
+            </div>
+          </section>
+          <br> &nbsp;
+          <br> &nbsp;
+      
+        <div class="hr">
+            <hr>
+        </div>
+        <br> &nbsp;
+          <br> &nbsp;
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">ORGANIZING PARTNERS</h2>
         <!-- Image container -->
+        <br> &nbsp;
         <div class="image-container">
             <div class="image-1">
                 <img src="6.jpeg" alt="">
@@ -709,15 +180,32 @@
                 <img src="7.jpeg" alt="">
             </div>
         </div>
-
+    </div>
+&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+    <div class="grid-container">
+        <!-- First Item: Loader -->
+        <embed type="application/json" src="https://lottie.host/embed/55a3c58d-5f70-487c-bebb-955ea28a3548/zZ1eFtl9Fl.json" style="height: 200px; width: 900px; margin-left: -10%;" >
+          
+        <!-- Second Item: Placeholder Content -->
+        <div class="content-agenda">
+            <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">What We Expect?</h2>
+            <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
+                with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
+                Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
+                In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
+                come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
+                places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
+                implementation.</p>
+        </div>
     </div>
 
-    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(1, 1, 54);">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
-    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.2rem; color: rgb(1, 1, 54); font-weight: bold;">EVENTS AND ENQUIRY</h3>
+</div>  
 
-    <div class="hr">
-        <hr>
-    </div>
+  
+   
     <div class="container">
         <!-- Hero bar with sliding images (70% width) -->
         <div class="hero-bar">
@@ -749,83 +237,7 @@
             
         </div>
     </div>
-    <br> &nbsp;
-    <h1 class="btn-4">WHAT DOES <span id="sty"><u>PPGIT-CSE</u></span> HAVE HERE?</h1>
-    <br> &nbsp;
-    <br> &nbsp;
-    <section class="hero-slide">
-        <!-- Slide 1 -->
-        <div class="slide-container active">
-            <div class="content-container">
-                <h1>WELCOME TO PPGIT-CSE!!!</h1>
-                <p>	&#10687;Unlock your career and travel with us</p>
-                <p>	&#10687;Don't hesitate to contact our staff</p>
-            </div>
-        </div>
     
-        <!-- Slide 2 -->
-        <div class="slide-container">
-            <div class="content-container">
-                <h1>VALUE ADDED COURSES</h1>
-                <p>	&#10687;For every year students (I-IV)</p>
-                <p>	&#10687;Covering trendy technologies by skilled staffs</p>
-            </div>
-        </div>
-    
-        <!-- Slide 3 -->
-        <div class="slide-container">
-            <div class="content-container">
-                <h1>EVENTS IN PPGIT</h1>
-                <p>	&#10687;Organizing, Participating in events will be a part of academic</p>
-                <p>	&#10687;Culturals, Annual Sports day, Symposium and Mass event</p>
-            </div>
-        </div>
-    
-        <!-- Slide 4 -->
-        <div class="slide-container">
-            <div class="content-container">
-                <h1>PLACEMENTS</h1>
-                <p>	&#10687;8.4 LPA Highest salary and 3.5 LPA average salary for 2024 academic year.</p>
-            </div>
-        </div>
-    
-        <!-- Navigation buttons -->
-        <button class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-        <button class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
-    </section>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide .slide-container');
-        const prev = document.querySelector('.hero-slide .prev');
-        const next = document.querySelector('.hero-slide .next');
-        const slideInterval = 3000; // Interval between slides in milliseconds
-    
-        // Function to display the current slide
-        function showSlide() {
-            slides.forEach((slide) => {
-                slide.classList.remove('active');
-            });
-            slides[currentSlide].classList.add('active');
-        }
-    
-        // Function to move to the next slide
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-            showSlide();
-        }
-    
-        // Automatically move to the next slide at a set interval
-        setInterval(nextSlide, slideInterval);
-        
-        // Initial display of the first slide
-        showSlide();
-    </script>
-        
-        <br> &nbsp;
-        <br> &nbsp;
     
     <div class="image-section">
         <!-- First container -->
@@ -871,7 +283,7 @@
             <label class="form-display">Phone Number:</label>
             <input type="number" name="number" required> <!-- Changed type to 'tel' for phone numbers -->
             <br> &nbsp;
-            <input type="hidden" name="redirect" value="https://admissionform.formaloo.co/ppgit">
+            <input type="hidden" name="redirect" value="https://ppgit.formaloo.co/ideathonregistration">
             <button type="submit">Submit Details</button>
     
         </form>
@@ -879,61 +291,28 @@
     &nbsp;
     <br> &nbsp;
     <br> &nbsp;
-    <footer>
-        <div class="footer-container">
-            <!-- About Us section -->
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>
-                    The Department of Computer Science and Engineering at PPG Institute of Technology, Our dedicated faculty members have rich experience in academics, industry, and research.
-                </p>
-            </div>
-    
-            <!-- Quick Links section -->
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="admissionform.formaloo.co/ppgit">Admissions</a></li>
-                    <!-- Add more links as needed -->
-                </ul>
-            </div>
-    
-            <!-- Contact section -->
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>
-
-                    Phone: 90477 77277 | 90477 77977 <br>
-                    Email:  ppgit@ppg.edu.in
-                </p>
-            </div>
-    
-            <!-- Social Media section -->
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-icons" style="padding-top: 20px;">
-                    <a href="https://www.facebook.com/ppginstituteoftechnology" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/ppgtech/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ppg_i_tech?igsh=d2VrOGZoZXFmbjl1" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <!-- Add more social links as needed -->
-                </div>
-                
-            </div>
+  
+    <!---<div class="contact-us" style="padding: 90px;">
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">Contact Us</h2>
+        <div class="icons">
+            <ul class="icons">
+                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-discord"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-reddit"></ion-icon></a></li>
+            </ul>
         </div>
-        <div class="footer-credit">
-            <h4>Developed by PPGIT - Students of CSE Department.</h4>
-        </div>
-    </footer>
-    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    </div>-->
+    
+    
+        
     <!-- Floating icon -->
     <div class="floating-icon" onclick="togglePopup()">
         <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
@@ -955,6 +334,45 @@
             var popupContainer = document.getElementById('popup-container');
             popupContainer.style.display = (popupContainer.style.display === 'none' || popupContainer.style.display === '') ? 'flex' : 'none';
         }
+
+    $(document).ready(function () {
+        var mySwiper = new Swiper(".swiper", {
+            autoHeight: true,
+            autoplay: {
+            delay: 4000,  // Adjusted animation delay to 4 seconds
+            disableOnInteraction: false
+            },
+            speed: 800,  // Adjusted speed of transition to 800ms
+            direction: "horizontal",
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar"
+            },
+            loop: false,
+            effect: "slide",
+            spaceBetween: 30,
+            on: {
+            init: function () {
+                $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+                $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+            },
+            slideChangeTransitionStart: function () {
+                $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+                $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+            }
+            }
+        });
+        $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+            mySwiper.slideTo($(this).index());
+            $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+            $(this).addClass("active");
+        });
+        });
+
     </script>
 </body>
 
