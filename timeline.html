@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="timeline.css">
+
+<body>
+ <div style="height: 120px; width: 100%; justify-content: center; align-items: center; text-align: center;">
+    <h1 class="btn-4">TECHNO <span id="sty"><u>KREATICON </u></span>TIMELINE</h1>
+    &nbsp;
+    <br>&nbsp;
+    <br>&nbsp;
+
+    <section class="intro">
+        <div class="container">
+          <h2>DAY 1</h2>
+        </div>
+      </section>
+      
+      <section class="timeline" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <ul>
+          <li>
+            <div>
+              <time>9.30AM</time>
+             Event Welcome Ceremony</div>
+          </li>
+          
+          <li>
+            <div>
+              <time>10.30AM</time>
+              3 Domain Idea pitch will Started</div>
+          </li>
+          
+          <li>
+            <div>
+              <time>2.00PM</time>
+              LUNCH BREAK </div>
+          </li>
+          
+          <li>
+            <div>
+              <time>3.00PM</time>
+             Idea pitching Continuation</div>
+          </li>
+          
+          <li>
+            <div>
+              <time>3.30PM</time>
+             3 Domain Finalist Announcement </div>
+          </li>
+          
+          <li>
+            <div>
+              <time>4.00PM</time>
+             Event Day 1 Concluded</div>
+          </li>
+         &nbsp;
+         <br>&nbsp;
+         <br>&nbsp;
+         <br>&nbsp;
+           
+         <div class="container">
+            <h2>DAY 2</h2>
+          </div>
+          <section class="timeline" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <ul>
+              <li>
+                <div>
+                  <time>9.30AM</time>
+                 Event Welcome Ceremony</div>
+              </li>
+              
+              <li>
+                <div>
+                  <time>10.30AM</time>
+                  2 Domain Idea pitch will Started</div>
+              </li>
+              
+              <li>
+                <div>
+                  <time>2.00PM</time>
+                  LUNCH BREAK </div>
+              </li>
+              
+              <li>
+                <div>
+                  <time>3.00PM</time>
+                 Event Final Round</div>
+              </li>
+              
+              <li>
+                <div>
+                  <time>3.30PM</time>
+                 Prize Distribution</div>
+              </li>
+              
+              <li>
+                <div>
+                  <time>4.00PM</time>
+                 Event Day 2 Concluded</div>
+              </li>
+      
+          
+    
+        </ul>
+      </section>
+      <div style="color: #0f0c29;">end</div>
+  </div>
+  
+  
+</body>
+
+<script>
+    (function() {
+
+'use strict';
+
+// define variables
+var items = document.querySelectorAll(".timeline li");
+
+// check if an element is in viewport
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+
+// listen for events
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+})();
+</script>

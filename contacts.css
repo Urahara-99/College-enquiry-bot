@@ -1,0 +1,63 @@
+
+h1{
+        width: 750px;
+        margin: auto;
+        height: 90px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #ffffffb2, #0172fc8d); /* Gradient background */
+        box-shadow: 0 4px 6px rgb(32, 48, 174);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+        color: #01113b;
+        padding-top: 10px; 
+}
+#sty{
+    background-image: url("/sty.gif");
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    font-size: 3.4rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: #111827;
+    overflow: hidden;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 750px;
+}
+
+ul:nth-child(3) ,ul:nth-child(2){
+    margin-top: 100px;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 60px;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+a:hover{
+    font-size: 50px;
+    color: #01FFF4;
+    box-shadow: 0 0 40px #01FFF4;
+}

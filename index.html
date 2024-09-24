@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>PPG Institute of Technology Chatbot</title>
     <link rel="stylesheet" href="index.css">
@@ -28,8 +27,7 @@
         <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.9rem; color: rgb(152, 189, 254); font-weight:2px; letter-spacing: 2px;">PRESENTS</h3>
     
 &nbsp;
-<br> &nbsp;
-<br> &nbsp;
+
 <div class="grid-container">
     <!-- First Item: Loader -->
     <div class="loader-wrapper">
@@ -132,14 +130,15 @@
                 </div>
                 <div class="box">
                   <div class="image">
-                 
+                    <a href="timeline.html" style="text-decoration: none;">
                     <img src="timeline.png" alt="html">
                   </div>
-                  <div class="title">Timeline</div>
+                  <div class="title">Timeline</div></a>
                 </div>
                 
                 <div class="box">
                   <div class="image">
+                   
                     <img src="1st-prize.png" alt="javascript">
                   </div>
                   <div class="title">Prizes</div>
@@ -152,7 +151,8 @@
                 </div>
                 <div class="box">
                   <div class="image">
-                    <img src="contact-us.png" alt="illustrator">
+                    <a href="contacts.html" style="text-decoration: none;">
+                    <img src="contact-us.png" alt="illustrator"></a>
                   </div>
                   <div class="title">Contact Us</div>
                 </div>
@@ -201,61 +201,8 @@
                 implementation.</p>
         </div>
     </div>
-
 </div>  
-
-  
    
-    <div class="container">
-        <!-- Hero bar with sliding images (70% width) -->
-        <div class="hero-bar">
-            <div class="slide">
-                <img src="" alt="Image 1">
-            </div>
-            <div class="slide">
-                <img src="./13.jpeg" alt="Image 1">
-            </div>
-                      
-            <div class="slide">
-                <img src="./16.jpg" alt="Image 2">
-            </div>
-            <div class="slide">
-                <img src="./1.jpeg" alt="Image 3">
-            </div>
-            <div class="slide">
-                <img src="./17.jpeg" alt="Image 4">
-            </div>
-            <div class="slide">
-                <img src="./18.jpeg" alt="Image 5">
-            </div>
-            <div class="slide">
-                <img src="./38.jpeg" alt="Image 5">
-            </div>
-            <div class="slide">
-                <img src="./37.jpg" alt="Image 2">
-            </div>
-            
-        </div>
-    </div>
-    
-    
-    <div class="image-section">
-        <!-- First container -->
-        <div class="image-container-1">
-            <img src="20.jpg" alt="Image 1">
-            <button class="btn-1">
-                <a href="events.html" style="text-decoration: none;">EVENTS</a>
-            </button>
-        </div>
-        <vl></vl>
-        <!-- Second container -->
-        <div class="image-container-2">
-            <img src="21.jpg" alt="Image 2">
-            <button class="btn-1">
-                <a href="achievements.html" style="text-decoration: none;">ACHIEVEMENTS</a>
-            </button>
-        </div>
-    </div>
     &nbsp;
     <br> &nbsp;
     <br> &nbsp;
@@ -290,28 +237,7 @@
     </div>    
     &nbsp;
     <br> &nbsp;
-    <br> &nbsp;
-  
-    <!---<div class="contact-us" style="padding: 90px;">
-        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">Contact Us</h2>
-        <div class="icons">
-            <ul class="icons">
-                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href=""><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href=""><ion-icon name="logo-discord"></ion-icon></a></li>
-                <li><a href=""><ion-icon name="logo-reddit"></ion-icon></a></li>
-            </ul>
-        </div>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    </div>-->
-    
-    
+    <br> &nbsp;  
         
     <!-- Floating icon -->
     <div class="floating-icon" onclick="togglePopup()">
@@ -335,43 +261,57 @@
             popupContainer.style.display = (popupContainer.style.display === 'none' || popupContainer.style.display === '') ? 'flex' : 'none';
         }
 
-    $(document).ready(function () {
-        var mySwiper = new Swiper(".swiper", {
-            autoHeight: true,
-            autoplay: {
-            delay: 4000,  // Adjusted animation delay to 4 seconds
-            disableOnInteraction: false
-            },
-            speed: 800,  // Adjusted speed of transition to 800ms
-            direction: "horizontal",
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-            },
-            pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar"
-            },
-            loop: false,
-            effect: "slide",
-            spaceBetween: 30,
-            on: {
-            init: function () {
-                $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-                $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
-            },
-            slideChangeTransitionStart: function () {
-                $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-                $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
-            }
-            }
-        });
-        $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
-            mySwiper.slideTo($(this).index());
-            $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-            $(this).addClass("active");
-        });
-        });
+        
+    function qs(selector, all = false) {
+      return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+    }
+
+    const sections = qs('.timeline-section', true);
+    const timeline = qs('.timeline');
+    const line = qs('.timeline-line');
+
+    line.style.bottom = `calc(100% - 20px)`;
+    let prevScrollY = window.scrollY;
+    let up, down;
+    let full = false;
+    let set = 0;
+    const targetY = window.innerHeight * 0.8;
+
+    function scrollHandler(e) {
+      const { scrollY } = window;
+
+      up = scrollY < prevScrollY;
+      down = !up;
+
+      const timelineRect = timeline.getBoundingClientRect();
+      const lineRect = line.getBoundingClientRect();
+      const dist = targetY - timelineRect.top;
+
+      if (down && !full) {
+        set = Math.max(set, dist);
+        line.style.bottom = `calc(100% - ${set}px)`;
+      }
+
+      if (dist > timeline.offsetHeight + 50 && !full) {
+        full = true;
+        line.style.bottom = `-50px`;
+      }
+
+      sections.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top + item.offsetHeight / 5 < targetY) {
+          item.classList.add('show-timeline');
+        }
+      });
+
+      prevScrollY = window.scrollY;
+    }
+
+    scrollHandler();
+    line.style.display = 'block';
+    window.addEventListener('scroll', scrollHandler);
+
+    
 
     </script>
 </body>
