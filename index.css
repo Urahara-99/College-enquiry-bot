@@ -393,19 +393,7 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-.social-icons a {
-    color: rgb(132, 184, 248); /* Wheat color for icons */
-    padding-top: 20px;
-    font-size: xx-large; /* Increased font size for social icons */
-    margin: 0 10px; /* Spacing between icons */
-    text-decoration: none; /* No underline */
-    transition: color 0.3s; /* Smooth color transition on hover */
-}
-
-.social-icons a:hover {
-    color: rgb(225, 155, 49); /* Dark blue color on hover */
-}
-        
+   
 .footer-credit {
     text-align: center;
     display: flex;
@@ -691,46 +679,6 @@ iframe{
  
 
 
-.icons {
-    display: flex;
-    flex-direction: column; /* Stack the two ul elements vertically */
-    align-items: center; /* Center align the ul elements */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    color: rgb(95, 186, 234);
-}
-
-ul {
-    display: flex;
-    justify-content: space-around; /* Space evenly in a row */
-    align-items: center;
-    list-style: none;
-    width: 750px;
-    margin-top: 20px; /* Reduced margin for better spacing */
-}
-
-ul:nth-child(2) {
-    margin-top: 0; /* Remove margin for the first ul */
-}
-
-a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 70px;
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 60px;
-    color: #93f7fe;
-    transition: 0.5s ease;
-}
-
-a:hover {
-    font-size: 50px;
-    color: #01FFF4;
-    box-shadow: 0 0 40px #01FFF4;
-}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
@@ -1041,8 +989,6 @@ img {
 .loader-wrapper, .vertical-line, .content-des {
     animation: popup 0.5s ease-out;
 }
-
-
 .content-agenda {
     display: flex;
     margin-left: -130%;
@@ -1051,3 +997,6 @@ img {
     text-align:left; /* Align text to the left */
 }
 
+  
+  
+  
