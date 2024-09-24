@@ -4,11 +4,34 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>TechNo Kreaticon</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <section class="hero" id="hero">
+        <div class="heroText">
+            <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800" style="color: #fff;">
+                Techno Kreaticon
+            </h1>
+
+            <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
+                Scroll down <strong class="custom-underline">Click to register</strong>
+            </p>
+        </div>
+
+        <div class="videoWrapper">
+            <video autoplay="" loop="" muted="" class="custom-video" poster="videos/techbg.mp4">
+                <source src="videos/techbg.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="overlay"></div>
+    </section>
+
     <nav>
         <ul>
             <li>
@@ -42,6 +65,7 @@
                     </div>
                 </div>
             </li>
+
         </ul>
     </nav>
     <!-- Header section with h1 and logos side by side -->
@@ -182,14 +206,15 @@
                         </div>
                         <div class="title">Agenda</div>
                     </div>
-                    
+
                     <a href="timeline.html">
-                    <div class="box">
-                        <div class="image">
-                            <img src="timeline.png" alt="html">
+                        <div class="box">
+                            <div class="image">
+                                <img src="timeline.png" alt="html">
+                            </div>
+                            <div class="title">Timeline</div>
                         </div>
-                        <div class="title">Timeline</div>
-                    </div></a>
+                    </a>
 
                     <div class="box">
                         <div class="image">
@@ -309,7 +334,22 @@
             <!-- iframe for loading the HTML file -->
         </div>
     </div>
-
+    <footer class="footer-section-event">
+        <div class="footer-container-event">
+            <div class="footer-about-event">
+                <h4>About the Event</h4>
+                <p>The CS Idea Pitching Event is a two-day competition that challenges teams to present innovative solutions
+                    in key technology domains. Join us for creativity, collaboration, and exciting prizes!</p>
+            </div>
+            <div class="footer-contact-event">
+                <h4>Quick links </h4>
+                <p>Time Line</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Venue: Non-AC Seminar Hall, CS Department</p>
+            </div>
+        </div>
+        
+    </footer>
     <script>
         // Function to toggle the visibility of the popup
         function togglePopup() {

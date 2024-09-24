@@ -9,6 +9,44 @@ body {
     margin: 0;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .custom-video,
+  .news-detail-image {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sticky-wrapper {
+    position: relative;
+    bottom: 76px;
+  }
+}
+
+.heroText {
+  position: absolute;
+  font-size: 30px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+}
+.heroText h1{
+  font-size: 120px;
+}
+
 
 /* Styling for the header */
 .header-container {
@@ -1426,3 +1464,74 @@ img {
     border-width: 0 16px 9px 16px;
     border-color: transparent transparent #090979 transparent;
   }
+
+
+  .footer-section-event {
+    background-color: #3131c97b;
+    width: 100%;
+    margin-bottom: 0%;  
+    border-radius: 0%;
+    color: #f2f2f2;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer-container-event {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .footer-about-event,
+  .footer-contact-event,
+  .footer-social-event {
+    width: 30%;
+    min-width: 250px;
+  }
+  
+  .footer-about-event h4,
+  .footer-contact-event h4,
+  .footer-social-event h4 {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+  
+  .footer-about-event p,
+  .footer-contact-event p{
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+  .footer-social-event a{
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+  
+  .footer-social-event a {
+    margin: 10px;
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .footer-social-event a:hover {
+    color: #ffcc00;
+  }
+  
+  .footer-bottom-event {
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 2px;
+  }
+  
+  .footer-bottom-event p {
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+  }
+  
+
+ /*  <!-- HTML !-->
+<button class="button-36" role="button">Button 36</button>
+
+CSS */
