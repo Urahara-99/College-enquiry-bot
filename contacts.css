@@ -189,7 +189,7 @@ h2{
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #fff;
   }
   
   .app-form-control:focus {
