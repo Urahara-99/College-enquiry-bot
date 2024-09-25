@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>PPG Institute of Technology Chatbot</title>
@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    
     <!-- Header section with h1 and logos side by side -->
     <div class="header-container">
         <div class="header">
@@ -123,10 +122,10 @@
                 </div>
                 <div class="box">
                   <div class="image">
-           
+                    <a href="agenda.html" style="text-decoration: none;">
                     <img src="agenda.png" alt="figma">
                   </div>
-                  <div class="title">Agenda</div>
+                  <div class="title">Agenda</div></a>
                 </div>
                 <div class="box">
                   <div class="image">
@@ -216,44 +215,6 @@
     &nbsp;
     <br>
     &nbsp;
-
-    <button class="btn-3">ADMISSION FORM</button>
-    <br> &nbsp;
-    <br> &nbsp;
-    <div class="form-container">
-        <form action="https://api.web3forms.com/submit" method="POST">
-    
-            <input type="hidden" name="access_key" value="44cc7048-f88d-444e-b280-c717bcfc224e">
-            <label class="form-display">Name:</label>
-            <input type="text" name="name" required>
-            <br> &nbsp;
-            <label class="form-display">Phone Number:</label>
-            <input type="number" name="number" required> <!-- Changed type to 'tel' for phone numbers -->
-            <br> &nbsp;
-            <input type="hidden" name="redirect" value="https://ppgit.formaloo.co/ideathonregistration">
-            <button type="submit">Submit Details</button>
-    
-        </form>
-    </div>    
-    &nbsp;
-    <br> &nbsp;
-    <br> &nbsp;  
-        
-    <!-- Floating icon -->
-    <div class="floating-icon" onclick="togglePopup()">
-        <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
-        <div class="floating-text">May I help you?</div> <!-- Floating text above the floating icon -->
-    </div>
-
-    <!-- Popup container -->
-    <div class="popup-container" id="popup-container">
-        <!-- Popup content -->
-        <div class="popup-content">
-            <iframe src="ppg.html" width="100%" height="100%" style="border: none;"></iframe>
-            <!-- iframe for loading the HTML file -->
-        </div>
-    </div>
-
     <script>
         // Function to toggle the visibility of the popup
         function togglePopup() {

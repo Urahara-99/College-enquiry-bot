@@ -79,6 +79,7 @@ CSS */
   border-radius: 10px;
 }
 .img_container {
+	margin: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
