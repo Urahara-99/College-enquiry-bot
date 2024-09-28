@@ -817,6 +817,19 @@ img {
     width: 100%;
 }
 
+/* Responsive grid for mobile */
+@media (max-width: 768px) {
+    .skills-flex-container {
+        grid-template-columns: repeat(2, 1fr); /* Change to 1x2 grid on mobile */
+        gap: 20px; /* Reduce spacing for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-flex-container {
+        grid-template-columns: 1fr; /* Change to 1x1 grid on smaller mobile screens */
+    }
+}
 .box {
     background: #040023;
     /* Dark background */
