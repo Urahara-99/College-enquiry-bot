@@ -822,8 +822,9 @@ img {
     /* Dark background */
     box-shadow: rgba(1, 11, 70, 0.5) 0px 0px 24px;
     padding: 20px;
+    height: 160px;
     text-align: center;
-    border: 10px solid #0a6ecc;
+    border: 10px solid #064581;
     /* Medium-light color border */
     transition: all 0.3s ease-in;
 }
@@ -833,19 +834,20 @@ img {
 }
 
 .image img {
-    max-width: 100px;
+    max-width: 120px;
     object-fit: contain;
 }
 
 .title {
     margin-top: 10px;
     text-align: center;
-    font-weight: lighter;
-    font-size:medium;
+    font-weight:bold;
+    font-size: 0.9rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(173, 203, 245);
+    color: rgb(216, 231, 252);
     transition: all 0.3s ease-in-out;
 }
+
 .box:hover {
     box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 30px;
     transform: scale(1.1);
@@ -864,7 +866,7 @@ img {
 }
 
 .box .image img {
-    max-width: 50px;
+    max-width: 80px;
 }
 
 
