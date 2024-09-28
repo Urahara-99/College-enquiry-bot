@@ -259,7 +259,30 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
+ 
+    width: 800px;
+    margin: auto;
+    height: 90px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #04afb2dc, #0172fcd6); /* Gradient background */
+    box-shadow: 0 4px 6px rgb(32, 48, 174);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #01113b;
+    padding-top: 10px; 
+}
+#sty{
+  background-image: url("/sty.gif");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
