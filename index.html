@@ -1,242 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>PPG Institute of Technology Chatbot</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="footer/fonts/icomoon/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="footer/css/bootstrap.min.css">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="footer/css/style.css">
+  <title>PPG Institute of Technology Chatbot</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
-    <!-- Header section with h1 and logos side by side -->
-    <div class="header-container">
-        <div class="header">
-            <div class="logo">
-                <img src="4.jpeg" alt="Logo Image" style="border-radius: 5px;">
-            </div>
-            <h1 style="color: rgb(161, 219, 253); font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PPG INSTITUTE OF TECHNOLOGY</h1>
-            <div class="logo-2">
-                <img src="10.jpg" alt="Logo Image" style="border-radius: 5px;">
-            </div>
-        </div>
-        <p style="color: rgb(154, 187, 241); border-radius: 10px;border-width: 0.8px; border-color: #97d5fc; ;justify-content: center; font-family: 'Times New Roman', Times, serif;">(Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
-            Recognized by UGC under section 2(f), An ISO 9001:2015 Certified Institution)
-        </p>
+  <section class="hero" id="hero">
+    <div class="heroText">
+      <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+        Techno Kreaticon
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="1000">
+        create a great video for your <strong class="custom-underline">website</strong>
+      </p>
+      <img src="Index_asssets/Scroll down.png" alt="Chatbot Icon" >
+    </div>
 
-        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
-        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.9rem; color: rgb(152, 189, 254); font-weight:2px; letter-spacing: 2px;">PRESENTS</h3>
-    
-&nbsp;
+    <div class="videoWrapper">
+      <video autoplay="" loop="" muted="" class="custom-video" poster="videos/792bd98f3e617786c850493560e11c45.jpg">
+        <source src="Index_asssets/techbg.mp4" type="video/mp4">
 
-<div class="grid-container">
-    <!-- First Item: Loader -->
-    <div class="loader-wrapper">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <!-- Header section with h1 and logos side by side -->
+  <div class="header-container">
+    <div class="header">
+      <div class="logo">
+        <img src="4.jpeg" alt="Logo Image" style="border-radius: 5px;">
+      </div>
+      <h1
+        style="color: rgb(161, 219, 253); font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        PPG INSTITUTE OF TECHNOLOGY</h1>
+      <div class="logo-2">
+        <img src="10.jpg" alt="Logo Image" style="border-radius: 5px;">
+      </div>
+    </div>
+    <p
+      style="color: rgb(154, 187, 241); border-radius: 10px;border-width: 0.8px; border-color: #97d5fc; ;justify-content: center; font-family: 'Times New Roman', Times, serif;">
+      (Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
+      Recognized by UGC under section 2(f), An ISO 9001:2015 Certified Institution)
+    </p>
+
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">DEPARTMENT OF COMPUTER
+      SCIENCE AND ENGINEERING</h2>
+    <h3
+      style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.9rem; color: rgb(152, 189, 254); font-weight:2px; letter-spacing: 2px;">
+      PRESENTS</h3>
+
+    &nbsp;
+
+    <div class="grid-container">
+      <!-- First Item: Loader -->
+      <div class="loader-wrapper">
         <div class="loader">
-            <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
-                <defs>
-                    <linearGradient gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0" id="b">
-                        <stop stop-color="#973BED"></stop>
-                        <stop stop-color="#007CFF" offset="1"></stop>
-                    </linearGradient>
-                </defs>
-            </svg>
+          <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
+            <defs>
+              <linearGradient gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0" id="b">
+                <stop stop-color="#973BED"></stop>
+                <stop stop-color="#007CFF" offset="1"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
 
-            <!-- T -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
-                class="inline-block">
-                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
-                    d="M 12 4 H 52 V 8 H 36 V 60 H 28 V 8 H 12 Z" class="dash" pathLength="360"></path>
-            </svg>
+          <!-- T -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+            class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+              d="M 12 4 H 52 V 8 H 36 V 60 H 28 V 8 H 12 Z" class="dash" pathLength="360"></path>
+          </svg>
 
-            <!-- E -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
-                class="inline-block">
-                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.7" stroke="url(#b)"
-                    d="M 52 4 H 12 V 60 H 52 V 52 H 20 V 36 H 48 V 28 H 20 V 12 H 52 Z" class="dash"
-                    pathLength="360"></path>
-            </svg>
+          <!-- E -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+            class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.7" stroke="url(#b)"
+              d="M 52 4 H 12 V 60 H 52 V 52 H 20 V 36 H 48 V 28 H 20 V 12 H 52 Z" class="dash" pathLength="360"></path>
+          </svg>
 
-            <!-- C -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
-                class="inline-block">
-                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
-                    d="M 52 12 V 4 H 12 V 60 H 52 V 52 H 20 V 12 Z" class="dash" pathLength="360"></path>
-            </svg>
+          <!-- C -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+            class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+              d="M 52 12 V 4 H 12 V 60 H 52 V 52 H 20 V 12 Z" class="dash" pathLength="360"></path>
+          </svg>
 
-            <!-- H -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
-                class="inline-block">
-                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.5" stroke="url(#b)"
-                    d="M 12 4 V 60 H 20 V 36 H 44 V 60 H 52 V 4 H 44 V 28 H 20 V 4 Z" class="dash"
-                    pathLength="360"></path>
-            </svg>
+          <!-- H -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+            class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.5" stroke="url(#b)"
+              d="M 12 4 V 60 H 20 V 36 H 44 V 60 H 52 V 4 H 44 V 28 H 20 V 4 Z" class="dash" pathLength="360"></path>
+          </svg>
 
-            <!-- N -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
-                class="inline-block">
-                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="12.5" stroke="url(#b)"
-                    d="M 12 4 V 60 H 20 L 44 20 V 60 H 52 V 4 H 44 L 20 44 V 4 Z" class="dash" pathLength="360">
-                </path>
-            </svg>
+          <!-- N -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+            class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="12.5" stroke="url(#b)"
+              d="M 12 4 V 60 H 20 L 44 20 V 60 H 52 V 4 H 44 L 20 44 V 4 Z" class="dash" pathLength="360">
+            </path>
+          </svg>
 
-            <!-- O -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="75" width="75" class="inline-block">
-                <!-- Outer circle -->
-                <circle cx="32" cy="32" r="24" stroke="url(#b)" stroke-width="10.5" fill="none" class="dash"
-                    pathLength="150"></circle>
-                <!-- Inner circle -->
-                <circle cx="32" cy="32" r="12" fill="none" />
-            </svg>
+          <!-- O -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="75" width="75" class="inline-block">
+            <!-- Outer circle -->
+            <circle cx="32" cy="32" r="24" stroke="url(#b)" stroke-width="10.5" fill="none" class="dash"
+              pathLength="150">
+            </circle>
+            <!-- Inner circle -->
+            <circle cx="32" cy="32" r="12" fill="none" />
+          </svg>
         </div>
         <div class="kreaticon-text">
-            <p style="font-size:larger; font-weight: bold; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #97d5fc;">KreatiCon</p>
+          <p
+            style="font-size:larger; font-weight: bold; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #97d5fc;">
+            KreatiCon</p>
         </div>
-    </div>
+      </div>
 
-    <!-- Vertical Line Separator -->
-    <div class="vertical-line"></div>
+      <!-- Vertical Line Separator -->
+      <div class="vertical-line"></div>
+
+      <!-- Second Item: Placeholder Content -->
+      <div class="content-des">
+        <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">2 Days Ideathon!</h2>
+        <p
+          style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+          Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day
+          event where people
+          with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML,
+          Automation, and many others.
+          Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
+          In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one
+          hour to
+          come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and
+          3rd
+          places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating
+          your
+          ideas into
+          implementation.</p>
+      </div>
+    </div>
+    <br> &nbsp;
+    <br> &nbsp;
+
+    <section class="skills">
+      <div class="container-menu">
+        <div class="skills-flex-container">
+          <div class="box">
+            <div class="image">
+              <a href="broucher.html" style="text-decoration: none;">
+                <img src="flyer.png" alt="xd">
+            </div>
+            <div class="title">Brochure</div></a>
+          </div>
+          <div class="box">
+            <div class="image">
+              <a href="agenda.html" style="text-decoration: none;">
+                <img src="agenda.png" alt="figma">
+            </div>
+            <div class="title">Agenda</div></a>
+          </div>
+          <div class="box">
+            <div class="image">
+              <a href="timeline.html" style="text-decoration: none;">
+                <img src="timeline.png" alt="html">
+            </div>
+            <div class="title">Timeline</div></a>
+          </div>
+
+          <div class="box">
+            <div class="image">
+
+              <img src="1st-prize.png" alt="javascript">
+            </div>
+            <div class="title">Prizes</div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <a href="rules.html" style="text-decoration: none;">
+                <img src="compliant.png" alt="photoshop">
+            </div>
+            <div class="title">Rules</div></a>
+          </div>
+          <div class="box">
+            <div class="image">
+              <a href="contacts.html" style="text-decoration: none;">
+                <img src="contact-us.png" alt="illustrator"></a>
+            </div>
+            <div class="title">Contact Us</div>
+          </div>
+        </div>
+    </section>
+    <br> &nbsp;
+    <br> &nbsp;
+
+    <div class="hr">
+      <hr>
+    </div>
+    <br> &nbsp;
+    <br> &nbsp;
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">ORGANIZING PARTNERS</h2>
+    <!-- Image container -->
+    <br> &nbsp;
+    <div class="image-container">
+      <div class="image-1">
+        <img src="6.jpeg" alt="">
+      </div>
+      <div class="image-2">
+        <img src="5.jpeg" alt="">
+      </div>
+      <div class="image-3">
+        <img src="7.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+  <br>&nbsp;
+  <br>&nbsp;
+  <br>&nbsp;
+  <div class="grid-container">
+    <!-- First Item: Loader -->
+    <embed type="application/json" src="https://lottie.host/embed/55a3c58d-5f70-487c-bebb-955ea28a3548/zZ1eFtl9Fl.json"
+      style="height: 200px; width: 900px; margin-left: -10%;">
 
     <!-- Second Item: Placeholder Content -->
-    <div class="content-des">
-        <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">2 Days Ideathon!</h2>
-        <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
-            with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
-            Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
-            In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
-            come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
-            places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
-            implementation.</p>
+    <div class="content-agenda">
+      <h2>What We Expect?</h2>
+      <p>
+        Put on your thinking caps as you prepare for a creative <br> problem-solving workout. This is a two-day event
+        where people with <br> bright ideas will come and present their ideas in five technology <br> segments such as
+        AI, ML, Automation, and many others. Teams must <br>come up with their ideas with each domain having one
+        finalist to compete<br> in the last round. In the last round of the competition, 5 teams will be shortlisted<br>
+        on the spot, and they will have only one hour to devise a different solution. <br> Don’t forget the attraction
+        of attractive awards for the 1st, 2nd, and 3rd places! <br> Do not let a day go by more so a week, a month, and
+        a year whereby you are <br>not translating your ideas into implementation.
+      </p>
     </div>
-</div>
-<br> &nbsp;
-<br> &nbsp;
-          
-        <section class="skills">
-            <div class="container-menu">
-              <div class="skills-flex-container">
-                <div class="box">
-                  <div class="image">
-                    <a href="broucher.html" style="text-decoration: none;">
-                    <img src="flyer.png" alt="xd">
-                  </div>
-                  <div class="title">Brochure</div></a>
-                </div>
-                <div class="box">
-                  <div class="image">
-                    <a href="agenda.html" style="text-decoration: none;">
-                    <img src="agenda.png" alt="figma">
-                  </div>
-                  <div class="title">Agenda</div></a>
-                </div>
-                <div class="box">
-                  <div class="image">
-                    <a href="timeline.html" style="text-decoration: none;">
-                    <img src="timeline.png" alt="html">
-                  </div>
-                  <div class="title">Timeline</div></a>
-                </div>
-                
-                <div class="box">
-                  <div class="image">
-                   
-                    <img src="1st-prize.png" alt="javascript">
-                  </div>
-                  <div class="title">Prizes</div>
-                </div>
-                <div class="box">
-                  <div class="image">
-                    <img src="compliant.png" alt="photoshop">
-                  </div>
-                  <div class="title">Rules</div>
-                </div>
-                <div class="box">
-                  <div class="image">
-                    <a href="contacts.html" style="text-decoration: none;">
-                    <img src="contact-us.png" alt="illustrator"></a>
-                  </div>
-                  <div class="title">Contact Us</div>
-                </div>
-            </div>
-          </section>
-          <br> &nbsp;
-          <br> &nbsp;
-      
-        <div class="hr">
-            <hr>
-        </div>
-        <br> &nbsp;
-          <br> &nbsp;
-        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">ORGANIZING PARTNERS</h2>
-        <!-- Image container -->
-        <br> &nbsp;
-        <div class="image-container">
-            <div class="image-1">
-                <img src="6.jpeg" alt="">
-            </div>
-            <div class="image-2">
-                <img src="5.jpeg" alt="">
-            </div>
-            <div class="image-3">
-                <img src="7.jpeg" alt="">
-            </div>
-        </div>
-    </div>
-&nbsp;
-<br>&nbsp;
-<br>&nbsp;
-<br>&nbsp;
-    <div class="grid-container">
-        <!-- First Item: Loader -->
-        <embed type="application/json" src="https://lottie.host/embed/55a3c58d-5f70-487c-bebb-955ea28a3548/zZ1eFtl9Fl.json" style="height: 200px; width: 900px; margin-left: -10%;" >
-          
-        <!-- Second Item: Placeholder Content -->
-        <div class="content-agenda">
-            <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">What We Expect?</h2>
-            <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
-                with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
-                Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
-                In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
-                come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
-                places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
-                implementation.</p>
-        </div>
-    </div>
-</div>  
-   
-    &nbsp;
-    <br> &nbsp;
-    <br> &nbsp;
-    <br> &nbsp;
-    <br> &nbsp;
+  </div>
+  </div>
 
-    <div class="hrr">
-        <hr>
+  &nbsp;
+  <br> &nbsp;
+  <br> &nbsp;
+  <br> &nbsp;
+  <br> &nbsp;
+  <!-- Floating icon -->
+  <div class="floating-icon" onclick="togglePopup()">
+    <div class="floating-text">
+      May I help you? <!-- Floating text above the floating icon -->
     </div>
-    <br>
-    &nbsp;
-    <br>
-    &nbsp;
-    <!-- Floating icon -->
-    <div class="floating-icon" onclick="togglePopup()">
-      <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
-      <div class="floating-text">May I help you?</div> <!-- Floating text above the floating icon -->
+    <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
   </div>
 
   <!-- Popup container -->
   <div class="popup-container" id="popup-container">
-      <!-- Popup content -->
-      <div class="popup-content">
-          <iframe src="ppg.html" width="100%" height="100%" style="border: none;"></iframe>
-          <!-- iframe for loading the HTML file -->
-      </div>
+    <!-- Popup content -->
+    <div class="popup-content">
+      <iframe src="ppg.html" width="100%" height="100%" style="border: none;"></iframe>
+      <!-- iframe for loading the HTML file -->
+    </div>
   </div>
-    <script>
-        // Function to toggle the visibility of the popup
-        function togglePopup() {
-            var popupContainer = document.getElementById('popup-container');
-            popupContainer.style.display = (popupContainer.style.display === 'none' || popupContainer.style.display === '') ? 'flex' : 'none';
-        }
+  <script>
+    // Function to toggle the visibility of the popup
+    function togglePopup() {
+      var popupContainer = document.getElementById('popup-container');
+      popupContainer.style.display = (popupContainer.style.display === 'none' || popupContainer.style.display === '') ? 'flex' : 'none';
+    }
 
-        
+
     function qs(selector, all = false) {
       return all ? document.querySelectorAll(selector) : document.querySelector(selector);
     }
@@ -286,9 +329,9 @@
     line.style.display = 'block';
     window.addEventListener('scroll', scrollHandler);
 
-    
 
-    </script>
+
+  </script>
 </body>
 
 </html>
