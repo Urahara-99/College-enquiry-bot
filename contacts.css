@@ -1,4 +1,30 @@
 
+@media screen and (max-width: 600px) {
+  /* Adjust header */
+  h1 {
+      margin: 10px auto;
+      height: auto; /* Adjust height for mobile */
+      font-size: 1.3rem; /* Smaller font size for mobile */
+      padding-top: 5px; /* Less padding */
+  }
+
+  /* Adjust the container padding */
+  .container {
+      padding: 5px 10px; /* Reduce padding */
+  }
+
+  /* Adjust button margins */
+  button {
+      margin: 10px 0; /* Less space around the button */
+  }
+
+  /* Adjust icon container */
+  .icons {
+      margin-top: 20px; /* Reduce gap between icons and elements above */
+      padding-bottom: 20px; /* Reduce bottom padding */
+  }
+}
+
 h1{
         width: 750px;
         margin: auto;
@@ -30,11 +56,9 @@ h1{
   body {
     background: #0f0c29;
     background: linear-gradient(to right, #050414, #090625, #1c1c3d);
-    background-size: cover;
-    background-position: center;
     text-align: center;
     padding-top: 35px;
-    margin: 0;
+   
 }
 h2{
     width: 250px;
@@ -58,7 +82,7 @@ h2{
   
   .background {
     display: flex;
-    min-height: 70vh;
+    min-height: 20vh;
     
   }
   
