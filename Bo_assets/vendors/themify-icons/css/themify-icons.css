@@ -26,6 +26,9 @@ CSS */
   user-select: none;
   touch-action: manipulation;
 }
+.header a{
+	border: none;
+}
 
 .button-85:before {
   content: "";

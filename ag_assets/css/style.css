@@ -5290,9 +5290,9 @@ a.close.disabled {
   width: 2rem;
   height: 2rem;
   vertical-align: text-bottom;
-  border: 0.25em solid currentColor;
+  border: none;
   border-right-color: transparent;
-  border-radius: 50%;
+  border-radius: 10px;
   -webkit-animation: spinner-border .75s linear infinite;
   animation: spinner-border .75s linear infinite; }
 
@@ -8411,6 +8411,14 @@ strong {
     opacity: .5;
     background: #000; }
 
+    .container .titletext{
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  .container .titletext h1{
+    font-size: 350%;
+  }
 .slider-text {
   position: relative;
   height: 780px; }
@@ -9835,9 +9843,11 @@ textarea.form-control {
       position: relative;
       overflow: hidden;
       border: 1px solid #18181a;
+      border-radius: 5px;
       color: #18181a;
       display: inline-block;
       font-size: 15px;
+      font-weight: bolder;
       line-height: 15px;
       padding: 18px 18px 17px;
       text-decoration: none;
@@ -9893,3 +9903,34 @@ textarea.form-control {
       opacity: 1;
       transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
     }
+
+    @font-face {
+      font-family: 'TheFont';
+      src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+        format('woff2'); }
+
+  .breathe-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    padding-top: 90px;
+  }
+
+  .breathe-animation span {
+    font-family: 'TheFont';
+    font-size: clamp(2vw, 5vw, 10vh);
+    color: white;
+    text-align: center; 
+    animation: letter-breathe 3s ease-in-out infinite;
+}
+  
+  @keyframes letter-breathe {
+    from,
+    to {
+      font-variation-settings: 'wght' 100;
+    }
+    50% {
+      font-variation-settings: 'wght' 900;
+    }
+  }
