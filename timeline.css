@@ -258,7 +258,7 @@ font-variation-settings: 'wght' 900;
 p {
   text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
 }
-.container {
+.titlecontainer {
   color: #e5e5e5;
   font-size: 2.26rem;
   text-transform: uppercase;
