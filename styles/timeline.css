@@ -201,7 +201,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 10vh;
-padding-top: 90px;
+padding-top: 50px;
 padding-bottom: 50px;
 }
 
@@ -255,14 +255,13 @@ font-variation-settings: 'wght' 900;
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 
-p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-}
 .titlecontainer {
-  color: #e5e5e5;
-  font-size: 2.26rem;
+  color: #11013d;
+  font-size: 2.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
   text-transform: uppercase;
   height: 15vh;
+  font-weight: 550;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,13 +286,17 @@ p {
 
 .first div {
   background-color:#20a7d8;
+  border-radius: 4px;
 }
 .second div {
-  background-color:#CD921E;
+  background-color:#eeeff5;
+  border-radius: 4px;
 }
 .third div {
-  background-color:#c10528;
+  background-color:#2bfadb;
+  border-radius: 4px;
 }
+
 
 @keyframes text-animation {
   0% {margin-top: 0;}
