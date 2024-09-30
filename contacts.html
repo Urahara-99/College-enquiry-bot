@@ -25,26 +25,31 @@
                             <img src="styles/chat.png" style="height: 210px; margin-top: 5px; width: 220px;" alt="">
                             <div class="app-contact">CONTACT INFO : STAFF CO-ORDINATOR +918197538732</div>
                         </div>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+    
+                        <input type="hidden" name="access_key" value="d7e7bb69-2d35-43a4-b8ad-6bf946c6cb10">
                         <div class="screen-body-item">
                             <div class="app-form">
                                 <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="NAME">
+                                    <input class="app-form-control" placeholder="NAME" name="name">
                                 </div>
                                 <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="EMAIL">
+                                    <input class="app-form-control" placeholder="EMAIL" name="mailID">
                                 </div>
                                 <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="CONTACT NO">
+                                    <input class="app-form-control" placeholder="CONTACT NO" name="contact">
                                 </div>
                                 <div class="app-form-group message">
-                                    <input class="app-form-control" placeholder="MESSAGE">
+                                    <input class="app-form-control" placeholder="MESSAGE" name="message">
                                 </div>
                                 <div class="app-form-group buttons">
                                     <button class="app-form-button">CANCEL</button>
+                                    <input type="hidden" name="redirect" value="/contact.html">
                                     <button class="app-form-button">SEND</button>
                                 </div>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
