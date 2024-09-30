@@ -1,0 +1,138 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.chatbot-container {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 15px;
+    background-color: #06050c;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(87, 0, 0, 0.2);
+}
+
+/* Styling for the chatbot header */
+.chatbot-header {
+    background-color: #06050c;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* Styling for icons in the chatbot header */
+.chatbot-header img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+
+.chatbot-header .left-icon {
+    left: 30px;
+}
+
+.chatbot-header .right-icon {
+    right: 30px;
+}
+
+hr {
+    width: 90%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin: 0 auto;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for user and chatbot messages */
+.chat-message {
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Styling for user messages */
+.user-message {
+    background-color: rgb(137, 245, 249); /* Orange background */
+    color: black;
+    width: 40%;
+}
+
+/* Styling for chatbot responses */
+.chatbot-response {
+    background-color: #4f4f4f; /* Dark gray background */
+    color: white;
+}
+
+/* Options container */
+.options-container {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Styling for options buttons */
+.option-button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(142, 206, 252); /* Orange background */
+    color: black;
+    border-radius: 4px;
+    width: calc(50% - 5px);
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Nested options styling */
+.nested-option-button {
+    padding: 8px;
+    border: none;
+    background-color: rgb(137, 249, 240);
+    color: black;
+    border-radius: 4px;
+    width: auto;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-right: 5px; /* Adds gap between buttons */
+}
+
+/* Refresh button styling */
+.refresh-button {
+    padding: 10px;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
