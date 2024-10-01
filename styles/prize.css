@@ -6,7 +6,7 @@ h1{
     border-radius: 10px;
     background: linear-gradient(to right, #ffffffb2, #0172fc8d); /* Gradient background */
     box-shadow: 0 4px 6px rgb(32, 48, 174);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 1.7rem;
     color: #01113b;
@@ -14,7 +14,7 @@ h1{
     margin-top: 30px;
 }
 #sty{
-background-image: url("styles/sty.gif");
+background-image: url("Index_assets/sty.gif");
 background-size: cover;
 background-position: center;
 color: transparent;
